@@ -1,10 +1,10 @@
-package com.egorpoprotskiy.rcdm.ui.notifications
+package com.egorpoprotskiy.rcdm.ui.easd
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class EasdViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"

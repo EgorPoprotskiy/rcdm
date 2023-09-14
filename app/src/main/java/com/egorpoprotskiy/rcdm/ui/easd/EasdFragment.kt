@@ -1,4 +1,4 @@
-package com.egorpoprotskiy.rcdm.ui.notifications
+package com.egorpoprotskiy.rcdm.ui.easd
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.egorpoprotskiy.rcdm.databinding.FragmentNotificationsBinding
+import com.egorpoprotskiy.rcdm.databinding.FragmentEasdBinding
 
-class NotificationsFragment : Fragment() {
+class EasdFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentEasdBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val easdViewModel =
+            ViewModelProvider(this).get(EasdViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentEasdBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textEasd
+        easdViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

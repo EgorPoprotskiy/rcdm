@@ -1,4 +1,4 @@
-package com.egorpoprotskiy.rcdm.ui.dashboard
+package com.egorpoprotskiy.rcdm.ui.info
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.egorpoprotskiy.rcdm.databinding.FragmentDashboardBinding
+import com.egorpoprotskiy.rcdm.databinding.FragmentInfoBinding
 
-class DashboardFragment : Fragment() {
+class InfoFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentInfoBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+        val infoFragmentViewModel =
+            ViewModelProvider(this).get(InfoFragmentViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentInfoBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textInfo
+        infoFragmentViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

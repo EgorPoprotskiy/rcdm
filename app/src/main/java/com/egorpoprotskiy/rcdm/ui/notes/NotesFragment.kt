@@ -1,4 +1,4 @@
-package com.egorpoprotskiy.rcdm.ui.home
+package com.egorpoprotskiy.rcdm.ui.notes
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.egorpoprotskiy.rcdm.databinding.FragmentHomeBinding
+import com.egorpoprotskiy.rcdm.databinding.FragmentNotesBinding
 
-class HomeFragment : Fragment() {
+class NotesFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentNotesBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val notesViewModel =
+            ViewModelProvider(this).get(NotesViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentNotesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textNotes
+        notesViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
