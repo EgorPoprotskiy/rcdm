@@ -10,9 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.egorpoprotskiy.rcdm.databinding.FragmentNotesBinding
 
 class NotesFragment : Fragment() {
-
+    //7.1 Объявление binding
     private var _binding: FragmentNotesBinding? = null
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
