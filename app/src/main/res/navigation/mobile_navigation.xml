@@ -33,7 +33,7 @@
     <fragment
         android:id="@+id/noteAddFragment"
         android:name="com.egorpoprotskiy.rcdm.ui.notes.NoteAddFragment"
-        android:label="fragment_note_add"
+        android:label="@string/add_fragment_note"
         tools:layout="@layout/fragment_note_add" >
         <action
             android:id="@+id/action_noteAddFragment_to_navigation_notes"
@@ -49,7 +49,7 @@
     <fragment
         android:id="@+id/noteDetailFragment"
         android:name="com.egorpoprotskiy.rcdm.ui.notes.NoteDetailFragment"
-        android:label="fragment_note_detail"
+        android:label="@string/details"
         tools:layout="@layout/fragment_note_detail" >
         <action
             android:id="@+id/action_noteDetailFragment_to_noteAddFragment"

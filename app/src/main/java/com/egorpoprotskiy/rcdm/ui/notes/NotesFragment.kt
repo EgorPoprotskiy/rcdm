@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.databinding.FragmentNotesBinding
 
 class NotesFragment : Fragment() {
@@ -21,17 +23,20 @@ class NotesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notesViewModel =
-            ViewModelProvider(this).get(NotesViewModel::class.java)
-
+        // 7.2 Раздувание макета через binding
         _binding = FragmentNotesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.textNotes
-        notesViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        // 7.4 Переход на на другой фрагмент
+        binding.addNote.setOnClickListener {
+            val action = NotesFragmentDirections.actionNavigationNotesToNoteAddFragment(
+                // 7.5 передача в другой фрагмент заголовка.(Чтобы добавить этот ресурс надо в navGraph добавить аргумент(label)
+                getString(R.string.add_fragment_note)
+            )
+            this.findNavController().navigate(action)
         }
-        return root
     }
 
     override fun onDestroyView() {
