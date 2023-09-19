@@ -15,11 +15,47 @@
         android:id="@+id/navigation_notes"
         android:name="com.egorpoprotskiy.rcdm.ui.notes.NotesFragment"
         android:label="@string/title_notes"
-        tools:layout="@layout/fragment_notes" />
+        tools:layout="@layout/fragment_notes"
+        app:navGraph="@navigation/mobile_navigation">
+        <action
+            android:id="@+id/action_navigation_notes_to_noteDetailFragment"
+            app:destination="@id/noteDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_notes_to_noteAddFragment"
+            app:destination="@id/noteAddFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_easd"
         android:name="com.egorpoprotskiy.rcdm.ui.easd.EasdFragment"
         android:label="@string/title_easd"
         tools:layout="@layout/fragment_easd" />
+    <fragment
+        android:id="@+id/noteAddFragment"
+        android:name="com.egorpoprotskiy.rcdm.ui.notes.NoteAddFragment"
+        android:label="fragment_note_add"
+        tools:layout="@layout/fragment_note_add" >
+        <action
+            android:id="@+id/action_noteAddFragment_to_navigation_notes"
+            app:destination="@id/navigation_notes" />
+        <argument
+            android:name="note"
+            app:argType="string" />
+        <argument
+            android:name="item_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteDetailFragment"
+        android:name="com.egorpoprotskiy.rcdm.ui.notes.NoteDetailFragment"
+        android:label="fragment_note_detail"
+        tools:layout="@layout/fragment_note_detail" >
+        <action
+            android:id="@+id/action_noteDetailFragment_to_noteAddFragment"
+            app:destination="@id/noteAddFragment" />
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+    </fragment>
 </navigation>
