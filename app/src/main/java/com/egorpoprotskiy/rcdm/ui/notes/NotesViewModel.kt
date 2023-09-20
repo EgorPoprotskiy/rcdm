@@ -61,6 +61,13 @@ class NotesViewModel(private val noteDao: NoteDao) : ViewModel() {
         // ..используйте это как возврат retrieveNote()функция. Завершенная функция должна выглядеть следующим образом:(Далее в NoteDetailFragment)
         return noteDao.getItem(id).asLiveData()
     }
+
+    //22.1 Удаление данных из БД (Далее в NotesFragment) - НАЧАЛО УДАЛЕНИЯ ОБЪЕТОВ ИЗ БД
+    fun deleteNote(note: Note) {
+        viewModelScope.launch {
+            noteDao.delete(note)
+        }
+    }
 }
 // 14.2 добавьте NoteViewModelFactory класс для создания экземпляра NoteViewModel экземпляр.
 class NoteViewModelFactory(private val noteDao: NoteDao): ViewModelProvider.Factory {
