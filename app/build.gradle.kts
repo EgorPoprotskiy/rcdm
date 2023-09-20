@@ -4,8 +4,6 @@ plugins {
     id("com.google.devtools.ksp")
     id("kotlin-android")
     id("androidx.navigation.safeargs.kotlin")
-    id("kotlin-kapt")
-
 }
 
 android {
@@ -41,9 +39,6 @@ android {
     buildFeatures {
         viewBinding = true
     }
-//    kotlin {
-//        jvmToolchain(17)
-//    }
 }
 
 dependencies {
@@ -83,6 +78,5 @@ dependencies {
     // дополнительно - Поддержка расширений Kotlin и сопрограмм для Room
     implementation("androidx.room:room-ktx:$room_version")
     // Для использования обработки символов Kotlin (KSP)
-//    ksp("androidx.room:room-compiler:$room_version")
-    kapt("androidx.room:room-compiler:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
 }

@@ -15,7 +15,7 @@ interface NoteDao {
     // 11.2 Внутри тела интерфейса добавьте @Insert аннотация. OnConflictStrategy.IGNORE стратегия игнорирует новый элемент, если его первичный ключ уже находится в базе данных
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     // добавьте insert() функция, которая принимает экземпляр Entity класс item как его аргумент.  Сделайте функцию функцией приостановки(suspend), чтобы эту функцию можно было вызывать из сопрограммы.
-    fun insert(note: Note)
+    suspend fun insert(note: Note)
     // 11.3 Обновление таблицы
     @Update
     fun update(note: Note)
