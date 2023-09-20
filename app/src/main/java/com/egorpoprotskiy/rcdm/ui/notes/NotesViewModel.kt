@@ -54,7 +54,7 @@ class NotesViewModel(private val noteDao: NoteDao) : ViewModel() {
         return true
     }
 
-    //20.1 Получаем сведения об элементе
+    //20.1 Получаем сведения о заметке
     fun retrieveNote(id: Int): LiveData<Note> {
         //20.2 Внутри новой функции вызовите getItem()на noteDao, передавая параметр id. getItem() функция..
         // ..возвращает Flow. Чтобы потреблять Flow значение как LiveData вызов asLiveData() функцию и ..
