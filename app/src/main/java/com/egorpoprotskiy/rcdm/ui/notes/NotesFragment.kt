@@ -1,5 +1,8 @@
 package com.egorpoprotskiy.rcdm.ui.notes
 
+import android.annotation.SuppressLint
+import android.graphics.Canvas
+import android.graphics.Rect
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Note
 import android.view.LayoutInflater
@@ -10,9 +13,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.adapter.NoteListAdapter
 import com.egorpoprotskiy.rcdm.databinding.FragmentNotesBinding
+import kotlin.math.roundToInt
 
 class NotesFragment : Fragment() {
     //19.1 Использовать by activityViewModels() делегат свойства Kotlin для совместного использования ViewModel по фрагментам
@@ -64,7 +70,65 @@ class NotesFragment : Fragment() {
                 noteAdapter.submitList(it)
             }
         }
+        deleteItemSwipe(binding.recyclerView)
+    }
+    //22.2 Удаление заметки с помощью свапа
+    private fun deleteItemSwipe(recyclerViewNote: RecyclerView) {
+        val callback = object :
+            ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val item = noteAdapter.currentList[viewHolder.adapterPosition]
+                viewModel.deleteNote(item)
+            }
+            //---------------------
+            @SuppressLint("UseCompatLoadingForDrawables")
+            override fun onChildDraw(
+                c: Canvas,
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                dX: Float,
+                dY: Float,
+                actionState: Int,
+                isCurrentlyActive: Boolean
+            ) {
 
+                c.clipRect(
+                    0f,
+                    viewHolder.itemView.top.toFloat(),
+                    dX,
+                    viewHolder.itemView.bottom.toFloat()
+                )
+
+                val trashIcon = resources.getDrawable(R.drawable.baseline_delete_forever_24, null)
+                val textMargin = resources.getDimension(R.dimen.marginAll2).roundToInt()
+                trashIcon.bounds = Rect(
+                    textMargin,
+                    viewHolder.itemView.top + textMargin,
+                    textMargin + trashIcon.intrinsicWidth,
+                    viewHolder.itemView.top + trashIcon.intrinsicHeight + textMargin
+                )
+                trashIcon.draw(c)
+
+                super.onChildDraw(
+                    c,
+                    recyclerView,
+                    viewHolder,
+                    dX,
+                    dY,
+                    actionState,
+                    isCurrentlyActive
+                )
+            }
+        }
+        val itemTouchHelper = ItemTouchHelper(callback)
+        itemTouchHelper.attachToRecyclerView(recyclerViewNote)
     }
     override fun onDestroyView() {
         super.onDestroyView()
