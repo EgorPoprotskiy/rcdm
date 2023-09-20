@@ -1,5 +1,6 @@
 package com.egorpoprotskiy.rcdm.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -12,6 +13,7 @@ import com.egorpoprotskiy.rcdm.model.Note
 class NoteListAdapter(private val onNoteClicked: (Note) -> Unit): ListAdapter<Note, NoteListAdapter.NoteViewHolder>(DiffCallback) {
     //17.2 Создание класса NoteViewHolder
     class NoteViewHolder (private var binding: ItemNoteBinding): RecyclerView.ViewHolder(binding.root) {
+        @SuppressLint("ResourceAsColor")
         fun bind(note: Note) {
             //17.3 Заполнение данными(название, цена, количество)
             binding.apply {

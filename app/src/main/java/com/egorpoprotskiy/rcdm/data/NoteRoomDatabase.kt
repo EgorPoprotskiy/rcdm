@@ -13,9 +13,12 @@ import com.egorpoprotskiy.rcdm.model.Note
     * Установить version в качестве 1. Всякий раз, когда вы меняете схему таблицы базы данных, вам придется увеличивать номер версии.
     * Поставил exportSchema к false, чтобы не хранить резервные копии истории версий схемы.
 */
-@Database(entities = [Note::class], version = 1, exportSchema = false)
+@Database(entities = [Note::class], version = 2, exportSchema = false)
 abstract class NoteRoomDatabase: RoomDatabase() {
+    // 13.3 База данных должна знать о DAO. Внутри тела класса объявите абстрактную функцию, которая возвращает NoteDao. У вас может быть несколько DAO.
     abstract fun noteDao(): NoteDao
+    // 13.4 Ниже абстрактной функции определите companion объект. Сопутствующий объект позволяет получить доступ к методам..
+    // ..создания или получения базы данных с использованием имени класса в качестве квалификатора.
     companion object {
         @Volatile
         private var INSTANCE: NoteRoomDatabase? = null

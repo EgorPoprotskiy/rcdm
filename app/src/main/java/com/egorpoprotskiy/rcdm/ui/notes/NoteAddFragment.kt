@@ -3,6 +3,7 @@ package com.egorpoprotskiy.rcdm.ui.notes
 import android.content.Context
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Note
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -81,6 +82,7 @@ class NoteAddFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         //16.10 Создание слушателя нажатий для кнопки "сохранить". На данном пункте функционал без блока "if", только то, что после else (На этом пункте заканчивается работа по созданию БД)
         binding.saveButton.setOnClickListener {
             addNewNote()
