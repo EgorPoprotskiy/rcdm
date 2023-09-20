@@ -4,20 +4,18 @@ import android.annotation.SuppressLint
 import android.graphics.Canvas
 import android.graphics.Rect
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Note
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.adapter.NoteListAdapter
 import com.egorpoprotskiy.rcdm.databinding.FragmentNotesBinding
+import com.egorpoprotskiy.rcdm.model.Note
 import kotlin.math.roundToInt
 
 class NotesFragment : Fragment() {
@@ -71,6 +69,7 @@ class NotesFragment : Fragment() {
             }
         }
         deleteItemSwipe(binding.recyclerView)
+        editItemSwipe(binding.recyclerView)
     }
     //22.2 Удаление заметки с помощью свапа
     private fun deleteItemSwipe(recyclerViewNote: RecyclerView) {
@@ -130,6 +129,73 @@ class NotesFragment : Fragment() {
         val itemTouchHelper = ItemTouchHelper(callback)
         itemTouchHelper.attachToRecyclerView(recyclerViewNote)
     }
+    //24.1 Редактирование заметки с помощью свайпа
+    private fun editItemSwipe(recyclerViewNote: RecyclerView) {
+        val callback = object :
+            ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val item = noteAdapter.currentList[viewHolder.adapterPosition]
+                bind(item)
+            }
+            //---------------------
+            @SuppressLint("UseCompatLoadingForDrawables")
+            override fun onChildDraw(
+                c: Canvas,
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                dX: Float,
+                dY: Float,
+                actionState: Int,
+                isCurrentlyActive: Boolean
+            ) {
+                c.clipRect(
+                    viewHolder.itemView.right.toFloat() + dX,
+                    viewHolder.itemView.top.toFloat(),
+                    viewHolder.itemView.right.toFloat(),
+                    viewHolder.itemView.bottom.toFloat()
+                )
+//                c.drawColor(Color.GREEN)
+
+                val editIcon = resources.getDrawable(R.drawable.baseline_edit_24, null)
+                val textMargin = resources.getDimension(R.dimen.marginAll2).roundToInt()
+                editIcon.bounds = Rect(
+                    viewHolder.itemView.right - editIcon.intrinsicWidth - textMargin,
+                    viewHolder.itemView.top + textMargin,
+                    viewHolder.itemView.right - textMargin,
+                    viewHolder.itemView.top + editIcon.intrinsicHeight + textMargin
+                )
+                editIcon.draw(c)
+                super.onChildDraw(
+                    c,
+                    recyclerView,
+                    viewHolder,
+                    dX,
+                    dY,
+                    actionState,
+                    isCurrentlyActive
+                )
+            }
+//--------------------
+        }
+        val itemTouchHelper = ItemTouchHelper(callback)
+        itemTouchHelper.attachToRecyclerView(recyclerViewNote)
+    }
+    //24.2 функция для перехода на экран редактирования(он же являетяс экраном добавления нового элемента)
+    private fun bind(note: Note) {
+        val action = NotesFragmentDirections.actionNavigationNotesToNoteAddFragment(
+            getString(R.string.edit_fragment_note), note.id
+        )
+        this.findNavController().navigate(action)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
