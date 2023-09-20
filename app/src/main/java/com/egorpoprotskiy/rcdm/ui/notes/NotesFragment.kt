@@ -53,7 +53,7 @@ class NotesFragment : Fragment() {
         noteAdapter = NoteListAdapter {
             //19.4 добавить переход на фрагмент с деталями одного продукта. Далее в InventoryViewModel.
             val action = NotesFragmentDirections.actionNavigationNotesToNoteDetailFragment(it.id)
-            this.findNavController().navigateUp()
+            this.findNavController().navigate(action)
         }
         //19.5 Привязать только что созданный adapter к recyclerView cледующим образом
         binding.recyclerView.adapter = noteAdapter

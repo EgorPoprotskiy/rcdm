@@ -18,10 +18,10 @@ interface NoteDao {
     suspend fun insert(note: Note)
     // 11.3 Обновление таблицы
     @Update
-    fun update(note: Note)
+    suspend fun update(note: Note)
     // 11.4 Удаление элементов из таблицы
     @Delete
-    fun delete(note: Note)
+    suspend fun delete(note: Note)
     // 11.5 Query - это запрос SQLite для извлечения элемента из таблицы элементов. (В данном случае извлечение id)
     // Обратите внимание на :id. Вы используете двоеточие в запросе для ссылки на аргументы функции.
     @Query("SELECT * FROM note WHERE id = :id")

@@ -53,6 +53,14 @@ class NotesViewModel(private val noteDao: NoteDao) : ViewModel() {
         }
         return true
     }
+
+    //20.1 Получаем сведения об элементе
+    fun retrieveNote(id: Int): LiveData<Note> {
+        //20.2 Внутри новой функции вызовите getItem()на noteDao, передавая параметр id. getItem() функция..
+        // ..возвращает Flow. Чтобы потреблять Flow значение как LiveData вызов asLiveData() функцию и ..
+        // ..используйте это как возврат retrieveNote()функция. Завершенная функция должна выглядеть следующим образом:(Далее в NoteDetailFragment)
+        return noteDao.getItem(id).asLiveData()
+    }
 }
 // 14.2 добавьте NoteViewModelFactory класс для создания экземпляра NoteViewModel экземпляр.
 class NoteViewModelFactory(private val noteDao: NoteDao): ViewModelProvider.Factory {
