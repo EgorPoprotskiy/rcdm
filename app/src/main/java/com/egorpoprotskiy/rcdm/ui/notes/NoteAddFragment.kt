@@ -111,7 +111,28 @@ class NoteAddFragment : Fragment() {
                 R.id.pink -> resources.getColor(R.color.pink).toString()
                 else -> resources.getColor(R.color.defaultColor).toString()
             }
+            //27.2 Слушатель нажатий на кнопку сохранить, но уже изменённые данные
+            saveButton.setOnClickListener { updateNote() }
         }
-
     }
+    //27.1 Проверка, что все поля заполнены(если заполнены, то переход в ItemListFragment)
+    private fun updateNote() {
+        if (isEntryValid()) {
+            viewModel.updateNote(
+                this.navigationArgs.itemId,
+                this.binding.noteHeading.text.toString(),
+                this.binding.noteDescription.text.toString(),
+                when (binding.noteColor.checkedRadioButtonId) {
+                    R.id.orange -> resources.getColor(R.color.orange).toString()
+                    R.id.blue -> resources.getColor(R.color.blue).toString()
+                    R.id.green -> resources.getColor(R.color.green).toString()
+                    R.id.pink -> resources.getColor(R.color.pink).toString()
+                    else -> resources.getColor(R.color.defaultColor).toString()
+                }
+            )
+            val action = NoteAddFragmentDirections.actionNoteAddFragmentToNavigationNotes()
+            findNavController().navigate(action)
+        }
+    }
+
 }
