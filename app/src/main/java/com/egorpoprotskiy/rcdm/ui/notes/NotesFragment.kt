@@ -51,7 +51,7 @@ class NotesFragment : Fragment() {
         binding.addNote.setOnClickListener {
             val action = NotesFragmentDirections.actionNavigationNotesToNoteAddFragment(
                 // 7.5 передача в другой фрагмент заголовка.(Чтобы добавить этот ресурс надо в navGraph добавить аргумент(label)
-                getString(R.string.add_fragment_note)
+                getString(R.string.add_new_note)
             )
             this.findNavController().navigate(action)
         }
@@ -88,7 +88,7 @@ class NotesFragment : Fragment() {
                 val item= noteAdapter.currentList[viewHolder.adapterPosition]
                 viewModel.deleteNote(item)
                 //29 Отображает всплывающее окно предупреждения для получения подтверждения пользователя перед удалением элемента.
-                Snackbar.make(binding.recyclerView, R.string.delete_question, Snackbar.LENGTH_INDEFINITE).setAction(R.string.cancel, View.OnClickListener {
+                Snackbar.make(binding.recyclerView, R.string.delete_question, Snackbar.LENGTH_LONG).setAction(R.string.cancel, View.OnClickListener {
                     viewModel.insertNote(item)
                 }).show()
             }

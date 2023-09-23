@@ -30,10 +30,11 @@
         android:name="com.egorpoprotskiy.rcdm.ui.easd.EasdFragment"
         android:label="@string/title_easd"
         tools:layout="@layout/fragment_easd" />
+
     <fragment
         android:id="@+id/noteAddFragment"
         android:name="com.egorpoprotskiy.rcdm.ui.notes.NoteAddFragment"
-        android:label="@string/add_fragment_note"
+        android:label="{note}"
         tools:layout="@layout/fragment_note_add" >
         <action
             android:id="@+id/action_noteAddFragment_to_navigation_notes"
@@ -51,9 +52,9 @@
         android:name="com.egorpoprotskiy.rcdm.ui.notes.NoteDetailFragment"
         android:label="@string/details"
         tools:layout="@layout/fragment_note_detail" >
-        <action
-            android:id="@+id/action_noteDetailFragment_to_noteAddFragment"
-            app:destination="@id/noteAddFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_noteDetailFragment_to_noteAddFragment"-->
+<!--            app:destination="@id/noteAddFragment" />-->
         <argument
             android:name="item_id"
             app:argType="integer" />

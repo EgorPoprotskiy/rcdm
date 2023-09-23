@@ -1,32 +1,29 @@
 <resources>
     <string name="app_name">rcdm</string>
-    <string name="title_notes">Notes</string>
+<!--    BottomNavigationView-->
     <string name="title_info">Info</string>
     <string name="title_easd">EASD</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="title_notes">Notes</string>
+<!--    ЗАМЕТКИ-->
     <string name="details">details</string>
+    <!--    Заголовки полей для заметок-->
     <string name="heading">Theme</string>
     <string name="description">Description</string>
-    <string name="add_button">add</string>
-    <string name="save_button">save</string>
-    <string name="delete_button">delete</string>
-    <string name="edit_button">edit</string>
-    <string name="add_fragment_note">Add note</string>
-    <string name="edit_fragment_note">Edit note</string>
+    <!--    Всплывающее окно при удалении заметки-->
     <string name="delete_question">Are you sure you want to delete?</string>
     <string name="cancel">Cancel</string>
-    <string name="no">No</string>
-    <string name="yes">Yes</string>
+    <!--    Цвет-->
     <string name="orange">orange</string>
     <string name="blue">blue</string>
     <string name="green">green</string>
     <string name="pink">pink</string>
     <string name="defaultColor">default</string>
+    <!--    Добавление и редактирование заметки-->
     <string name="add_new_note">Add new note</string>
-    <string name="edit_note">Edit note</string>
+    <string name="edit_fragment_note">Edit note</string>
+    <string name="save_button">save</string>
+    <string name="add_button">add</string>
+    <!--    расшаривание заметки-->
     <string name="share_note">Share note</string>
     <string name="note_details">Theme: %1$s; Description: %2$s</string>
-
 </resources>
