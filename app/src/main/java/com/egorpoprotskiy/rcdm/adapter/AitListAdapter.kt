@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.model.Ait
+import com.egorpoprotskiy.rcdm.ui.info.InfoFragment
 
-class AitListAdapter(private val context: Context, private val dataset: List<Ait>) :
+class AitListAdapter(private val context: InfoFragment, private val dataset: List<Ait>) :
     RecyclerView.Adapter<AitListAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val aitHeading: TextView = view.findViewById(R.id.aitHeading)
