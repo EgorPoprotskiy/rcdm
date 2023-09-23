@@ -70,27 +70,36 @@ class NotesViewModel(private val noteDao: NoteDao) : ViewModel() {
     }
 
     //26.1 Обновление данных именно в самой БД
-    private fun getUpdatedNoteEntry(noteId: Int, noteHeading: String, noteDescription: String, noteColor: String): Note {
+    private fun getUpdatedNoteEntry(
+        noteId: Int,
+        noteHeading: String,
+        noteDescription: String,
+        noteColor: String
+    ): Note {
         return Note(
-            id=noteId,
+            id = noteId,
             heading = noteHeading,
             description = noteDescription,
-            color = noteColor)
+            color = noteColor
+        )
     }
+
     //26.2 добавьте приватную функцию с именем updateNote() который принимает экземпляр класса сущности, Note
     fun updateNote(note: Note) {
         viewModelScope.launch {
             noteDao.update(note)
         }
     }
+
     //26.3 передача информации об объекте (Далее в NoteAddFragment)
     fun updateNote(noteId: Int, noteHeading: String, noteDescription: String, noteColor: String) {
         val updateNote = getUpdatedNoteEntry(noteId, noteHeading, noteDescription, noteColor)
         updateNote(updateNote)
     }
 }
+
 // 14.2 добавьте NoteViewModelFactory класс для создания экземпляра NoteViewModel экземпляр.
-class NoteViewModelFactory(private val noteDao: NoteDao): ViewModelProvider.Factory {
+class NoteViewModelFactory(private val noteDao: NoteDao) : ViewModelProvider.Factory {
     // 14.3 переопределить create() метод внутри ViewModelProvider.Factory (ctrl+O)
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         // 14.4 Реализовать create() метод. Проверьте, modelClass такое же, как NoteViewModel класс и вернуть его экземпляр. В противном случае сгенерируйте исключение.

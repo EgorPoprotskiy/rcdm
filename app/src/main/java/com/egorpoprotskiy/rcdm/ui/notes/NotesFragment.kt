@@ -22,15 +22,18 @@ import kotlin.math.roundToInt
 
 class NotesFragment : Fragment() {
     //19.1 Использовать by activityViewModels() делегат свойства Kotlin для совместного использования ViewModel по фрагментам
-    private val viewModel: NotesViewModel by activityViewModels{
+    private val viewModel: NotesViewModel by activityViewModels {
         // 19.2 вызовите NoteViewModelFactory() конструктор и передать в NoteDao экземпляр. Использовать database экземпляр, созданный вами в одной из предыдущих задач, для вызова noteDao конструктор.
         NoteViewModelFactory((activity?.application as NoteApplication).database.noteDao())
     }
+
     //7.1 Объявление binding
     private var _binding: FragmentNotesBinding? = null
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
     //19.0 переменные для адаптера
     private lateinit var noteAdapter: NoteListAdapter
     lateinit var note: Note
@@ -73,6 +76,7 @@ class NotesFragment : Fragment() {
         deleteItemSwipe(binding.recyclerView)
         editItemSwipe(binding.recyclerView)
     }
+
     //22.2 Удаление заметки с помощью свапа
     private fun deleteItemSwipe(recyclerViewNote: RecyclerView) {
         val callback = object :
@@ -84,15 +88,18 @@ class NotesFragment : Fragment() {
             ): Boolean {
                 return false
             }
+
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                val item= noteAdapter.currentList[viewHolder.adapterPosition]
+                val item = noteAdapter.currentList[viewHolder.adapterPosition]
                 viewModel.deleteNote(item)
                 //29 Отображает всплывающее окно предупреждения для получения подтверждения пользователя перед удалением элемента.
-                Snackbar.make(binding.recyclerView, R.string.delete_question, Snackbar.LENGTH_LONG).setAction(R.string.cancel, View.OnClickListener {
-                    viewModel.insertNote(item)
-                }).show()
+                Snackbar.make(binding.recyclerView, R.string.delete_question, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.cancel, View.OnClickListener {
+                        viewModel.insertNote(item)
+                    }).show()
             }
-//            ---------------------
+
+            //            ---------------------
             @SuppressLint("UseCompatLoadingForDrawables")
             override fun onChildDraw(
                 c: Canvas,
@@ -135,6 +142,7 @@ class NotesFragment : Fragment() {
         val itemTouchHelper = ItemTouchHelper(callback)
         itemTouchHelper.attachToRecyclerView(recyclerViewNote)
     }
+
     //24.1 Редактирование заметки с помощью свайпа
     private fun editItemSwipe(recyclerViewNote: RecyclerView) {
         val callback = object :
@@ -151,6 +159,7 @@ class NotesFragment : Fragment() {
                 val item = noteAdapter.currentList[viewHolder.adapterPosition]
                 editNote(item)
             }
+
             //---------------------
             @SuppressLint("UseCompatLoadingForDrawables")
             override fun onChildDraw(
@@ -194,6 +203,7 @@ class NotesFragment : Fragment() {
         val itemTouchHelper = ItemTouchHelper(callback)
         itemTouchHelper.attachToRecyclerView(recyclerViewNote)
     }
+
     //24.2 функция для перехода на экран редактирования(он же являетяс экраном добавления нового элемента)
     private fun editNote(note: Note) {
         val action = NotesFragmentDirections.actionNavigationNotesToNoteAddFragment(

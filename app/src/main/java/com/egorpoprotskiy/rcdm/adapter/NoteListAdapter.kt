@@ -10,9 +10,11 @@ import com.egorpoprotskiy.rcdm.databinding.ItemNoteBinding
 import com.egorpoprotskiy.rcdm.model.Note
 
 // 17.1 Добавляем адаптер для RecyclerView(создать класс/файл NoteListAdapter.kt)
-class NoteListAdapter(private val onNoteClicked: (Note) -> Unit): ListAdapter<Note, NoteListAdapter.NoteViewHolder>(DiffCallback) {
+class NoteListAdapter(private val onNoteClicked: (Note) -> Unit) :
+    ListAdapter<Note, NoteListAdapter.NoteViewHolder>(DiffCallback) {
     //17.2 Создание класса NoteViewHolder
-    class NoteViewHolder (private var binding: ItemNoteBinding): RecyclerView.ViewHolder(binding.root) {
+    class NoteViewHolder(private var binding: ItemNoteBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("ResourceAsColor")
         fun bind(note: Note) {
             //17.3 Заполнение данными(название, цена, количество)
@@ -29,6 +31,7 @@ class NoteListAdapter(private val onNoteClicked: (Note) -> Unit): ListAdapter<No
         //17.5 Раздувание макета из item_note.xml
         return NoteViewHolder(ItemNoteBinding.inflate(LayoutInflater.from(parent.context)))
     }
+
     //17.6 Переопределение метода для адаптера
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         //17.7 Получение текущего элемента с помощью getItem()
@@ -39,6 +42,7 @@ class NoteListAdapter(private val onNoteClicked: (Note) -> Unit): ListAdapter<No
         }
         holder.bind(current)
     }
+
     //17.9 Создание объекта для сравнения с предыдущими версиями(шаблонный код)
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<Note>() {
