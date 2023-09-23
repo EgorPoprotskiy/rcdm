@@ -71,7 +71,7 @@ class NotesFragment : Fragment() {
             }
         }
         deleteItemSwipe(binding.recyclerView)
-//        editItemSwipe(binding.recyclerView)
+        editItemSwipe(binding.recyclerView)
     }
     //22.2 Удаление заметки с помощью свапа
     private fun deleteItemSwipe(recyclerViewNote: RecyclerView) {
