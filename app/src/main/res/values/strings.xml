@@ -26,4 +26,15 @@
     <!--    расшаривание заметки-->
     <string name="share_note">Share note</string>
     <string name="note_details">Theme: %1$s; Description: %2$s</string>
+
+<!--    INFO-->
+    <!--    Автоматика и телемаханика-->
+    <string name="ait_heading">AiT theme</string>
+        <!--    АЛСН-->
+        <string name="alsn_heading">ALSN</string>
+        <string name="alsn_description">Automatic locomotive signalling of continuous operation</string>
+        <!--    САУТ-->
+        <string name="saut_heading">SAUT</string>
+        <string name="saut_description">Automatic train braking control system</string>
+
 </resources>
