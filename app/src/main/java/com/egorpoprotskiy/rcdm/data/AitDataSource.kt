@@ -7,7 +7,8 @@ class AitDataSource {
     fun loadAitDataSourse(): List<Ait> {
         return listOf(
             Ait(R.string.alsn_heading),
-            Ait(R.string.saut_heading)
+            Ait(R.string.saut_heading),
+            Ait(R.string.ktsm_heading)
         )
     }
 }
