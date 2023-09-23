@@ -16,7 +16,7 @@ class NotesViewModel(private val noteDao: NoteDao) : ViewModel() {
     val allItems: LiveData<List<Note>> = noteDao.getItems().asLiveData()
 
     // 14.5 добавь private функция называется insertNote() который принимает note объект и добавляет данные в базу данных неблокирующим образом.
-    private fun insertNote(note: Note) {
+    fun insertNote(note: Note) {
         // 14.6 Чтобы взаимодействовать с базой данных вне основного потока, запустите сопрограмму и вызовите в ней метод DAO.
         viewModelScope.launch {
             noteDao.insert(note)
@@ -78,7 +78,7 @@ class NotesViewModel(private val noteDao: NoteDao) : ViewModel() {
             color = noteColor)
     }
     //26.2 добавьте приватную функцию с именем updateNote() который принимает экземпляр класса сущности, Note
-    private fun updateNote(note: Note) {
+    fun updateNote(note: Note) {
         viewModelScope.launch {
             noteDao.update(note)
         }
