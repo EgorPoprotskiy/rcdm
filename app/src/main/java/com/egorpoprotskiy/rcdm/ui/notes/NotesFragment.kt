@@ -16,6 +16,8 @@ import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.adapter.NoteListAdapter
 import com.egorpoprotskiy.rcdm.databinding.FragmentNotesBinding
 import com.egorpoprotskiy.rcdm.model.Note
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import kotlin.math.roundToInt
 
 class NotesFragment : Fragment() {
@@ -69,7 +71,7 @@ class NotesFragment : Fragment() {
             }
         }
         deleteItemSwipe(binding.recyclerView)
-        editItemSwipe(binding.recyclerView)
+//        editItemSwipe(binding.recyclerView)
     }
     //22.2 Удаление заметки с помощью свапа
     private fun deleteItemSwipe(recyclerViewNote: RecyclerView) {
@@ -83,10 +85,14 @@ class NotesFragment : Fragment() {
                 return false
             }
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                val item = noteAdapter.currentList[viewHolder.adapterPosition]
+                val item= noteAdapter.currentList[viewHolder.adapterPosition]
                 viewModel.deleteNote(item)
+                //29 Отображает всплывающее окно предупреждения для получения подтверждения пользователя перед удалением элемента.
+                Snackbar.make(binding.recyclerView, R.string.delete_question, Snackbar.LENGTH_INDEFINITE).setAction(R.string.cancel, View.OnClickListener {
+                    viewModel.insertNote(item)
+                }).show()
             }
-            //---------------------
+//            ---------------------
             @SuppressLint("UseCompatLoadingForDrawables")
             override fun onChildDraw(
                 c: Canvas,
@@ -143,7 +149,7 @@ class NotesFragment : Fragment() {
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val item = noteAdapter.currentList[viewHolder.adapterPosition]
-                bind(item)
+                editNote(item)
             }
             //---------------------
             @SuppressLint("UseCompatLoadingForDrawables")
@@ -189,7 +195,7 @@ class NotesFragment : Fragment() {
         itemTouchHelper.attachToRecyclerView(recyclerViewNote)
     }
     //24.2 функция для перехода на экран редактирования(он же являетяс экраном добавления нового элемента)
-    private fun bind(note: Note) {
+    private fun editNote(note: Note) {
         val action = NotesFragmentDirections.actionNavigationNotesToNoteAddFragment(
             getString(R.string.edit_fragment_note), note.id
         )
