@@ -36,5 +36,8 @@
         <!--    САУТ-->
         <string name="saut_heading">SAUT</string>
         <string name="saut_description">Automatic train braking control system</string>
+        <!--    КТСМ-->
+        <string name="ktsm_heading">KTSM</string>
+        <string name="ktsm_description">Automatic train braking control system</string>
 
 </resources>
