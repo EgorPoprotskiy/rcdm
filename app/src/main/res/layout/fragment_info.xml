@@ -8,7 +8,7 @@
     tools:context=".ui.info.InfoFragmentViewModel">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_alsn"
+        android:id="@+id/recycler_view_ait"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:padding="6dp"

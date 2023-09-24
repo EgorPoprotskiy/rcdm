@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.model.Ait
 import com.egorpoprotskiy.rcdm.ui.info.InfoFragment
-
+//31 Создание адаптера для АиТ
 class AitListAdapter(private val context: InfoFragment, private val dataset: List<Ait>) :
     RecyclerView.Adapter<AitListAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val aitHeading: TextView = view.findViewById(R.id.aitHeading)
+        val aitHeading: TextView = view.findViewById(R.id.ait_label)
     }
 
     override fun onCreateViewHolder(

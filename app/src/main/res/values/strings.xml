@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">rcdm</string>
-<!--    BottomNavigationView-->
+    <!--    BottomNavigationView-->
     <string name="title_info">Info</string>
     <string name="title_easd">EASD</string>
     <string name="title_notes">Notes</string>
-<!--    ЗАМЕТКИ-->
+    <!--    ЗАМЕТКИ-->
     <string name="details">details</string>
     <!--    Заголовки полей для заметок-->
     <string name="heading">Theme</string>
@@ -27,17 +27,19 @@
     <string name="share_note">Share note</string>
     <string name="note_details">Theme: %1$s; Description: %2$s</string>
 
-<!--    INFO-->
+    <!--    INFO-->
     <!--    Автоматика и телемаханика-->
     <string name="ait_heading">AiT theme</string>
-        <!--    АЛСН-->
-        <string name="alsn_heading">ALSN</string>
-        <string name="alsn_description">Automatic locomotive signalling of continuous operation</string>
-        <!--    САУТ-->
-        <string name="saut_heading">SAUT</string>
-        <string name="saut_description">Automatic train braking control system</string>
-        <!--    КТСМ-->
-        <string name="ktsm_heading">KTSM</string>
-        <string name="ktsm_description">Automatic train braking control system</string>
+    <!--    АЛСН-->
+    <string name="alsn_heading">ALSN</string>
+    <string name="alsn_description">Automatic locomotive signalling of continuous operation</string>
+    <!--    САУТ-->
+    <string name="saut_heading">SAUT</string>
+    <string name="saut_description">Automatic train braking control system</string>
+    <!--    КТСМ-->
+    <string name="ktsm_heading">KTSM</string>
+    <string name="ktsm_description">Automatic train braking control system</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -31,8 +31,8 @@ class InfoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val myDataset = AitDataSource().loadAitDataSourse()
-        binding.recyclerViewAlsn.adapter = AitListAdapter(this, myDataset)
-        binding.recyclerViewAlsn.setHasFixedSize(true)
+        binding.recyclerViewAit.adapter = AitListAdapter(this, myDataset)
+        binding.recyclerViewAit.setHasFixedSize(true)
     }
 
     override fun onDestroyView() {
