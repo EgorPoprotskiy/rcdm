@@ -9,7 +9,11 @@
         android:id="@+id/navigation_info"
         android:name="com.egorpoprotskiy.rcdm.ui.info.InfoFragment"
         android:label="@string/title_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_navigation_info_to_aitDetailFragment"
+            app:destination="@id/aitDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notes"
@@ -59,4 +63,9 @@
             android:name="item_id"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/aitDetailFragment"
+        android:name="com.egorpoprotskiy.rcdm.ui.info.AitDetailFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_ait_detail" />
 </navigation>

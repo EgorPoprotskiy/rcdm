@@ -15,7 +15,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textStyle="bold"
         android:textSize="@dimen/marginAll3"
-        tools:text="Заголовок"/>
+        tools:text="Заголовок"
+        android:text="123"/>
 
     <TextView
         android:id="@+id/ait_description"
@@ -26,6 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ait_Heading"
         app:layout_constraintVertical_bias="0.0"
         android:textSize="@dimen/marginAll"
-        tools:text="Описание"/>
+        tools:text="Описание"
+        android:text="234"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

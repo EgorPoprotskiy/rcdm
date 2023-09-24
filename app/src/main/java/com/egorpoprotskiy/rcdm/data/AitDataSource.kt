@@ -5,7 +5,7 @@ import com.egorpoprotskiy.rcdm.model.Ait
 
 class AitDataSource {
     fun loadAitDataSourse(): List<Ait> {
-        return listOf(
+        return listOf<Ait>(
             Ait(R.string.alsn_heading),
             Ait(R.string.saut_heading),
             Ait(R.string.ktsm_heading)
