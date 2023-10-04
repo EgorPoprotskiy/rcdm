@@ -14,6 +14,15 @@
             android:id="@+id/action_navigation_info_to_aitDetailFragment"
             app:destination="@id/aitDetailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/aitDetailFragment"
+        android:name="com.egorpoprotskiy.rcdm.ui.info.AitDetailFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_ait_detail" >
+        <argument
+            android:name="aitHeading"
+            app:argType="integer" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notes"
@@ -63,9 +72,4 @@
             android:name="item_id"
             app:argType="integer" />
     </fragment>
-    <fragment
-        android:id="@+id/aitDetailFragment"
-        android:name="com.egorpoprotskiy.rcdm.ui.info.AitDetailFragment"
-        android:label="@string/details"
-        tools:layout="@layout/fragment_ait_detail" />
 </navigation>
