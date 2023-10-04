@@ -8,7 +8,7 @@
     tools:context=".ui.info.AitDetailFragment">
 
     <TextView
-        android:id="@+id/ait_Heading"
+        android:id="@+id/ait_Heading_View"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginAll2"
@@ -19,12 +19,12 @@
         android:text="Заголовок"/>
 
     <TextView
-        android:id="@+id/ait_description"
+        android:id="@+id/ait_description_View"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="@dimen/marginAll2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ait_Heading"
+        app:layout_constraintTop_toBottomOf="@+id/ait_Heading_View"
         app:layout_constraintVertical_bias="0.0"
         android:textSize="@dimen/marginAll"
         tools:text="Описание"

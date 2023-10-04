@@ -34,7 +34,7 @@ class InfoFragment : Fragment() {
     }
     //31.2 Привязка адаптера к АиТ и вызов этой функции в onViewCrated
     private fun navigationAitToAitDetailFragment() {
-        val myDataset = AitDataSource().loadAitDataSourse()
+        val myDataset = AitDataSource(requireContext()).loadAitDataSourse()
         val adapter = AitListAdapter(myDataset) {
             //33 Навигация во фрагмент деталей АиТ
             val action = InfoFragmentDirections.actionNavigationInfoToAitDetailFragment(it.aitHeading)

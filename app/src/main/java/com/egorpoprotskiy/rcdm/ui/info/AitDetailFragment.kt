@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
 import androidx.navigation.fragment.navArgs
 import com.egorpoprotskiy.rcdm.R
+import com.egorpoprotskiy.rcdm.data.AitDataSource
 import com.egorpoprotskiy.rcdm.databinding.FragmentAitDetailBinding
 import com.egorpoprotskiy.rcdm.model.Ait
 
@@ -33,10 +35,11 @@ class AitDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //34
         val arguments = arguments
         if (arguments != null && arguments.containsKey("aitHeading")) {
-            val aitHeading = arguments.getInt("aitHeading")
-            binding?.aitHeading?.text = aitHeading.toString()
+            val aitHeading = arguments.getString("aitHeading")
+            binding?.aitHeadingView?.text = aitHeading
         }
     }
 }
