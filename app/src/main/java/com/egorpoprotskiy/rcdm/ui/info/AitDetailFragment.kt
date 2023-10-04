@@ -20,7 +20,7 @@ class AitDetailFragment : Fragment() {
     //32 Объявление переменной navArgs(). Аргументы должны присутствовать в nav_graph этих фрагментов
     private val navigationArgs: AitDetailFragmentArgs by navArgs()
     //32 Привязка данных к TextView
-    lateinit var ait: Ait
+    private lateinit var ait: Ait
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -40,6 +40,12 @@ class AitDetailFragment : Fragment() {
         if (arguments != null && arguments.containsKey("aitHeading")) {
             val aitHeading = arguments.getString("aitHeading")
             binding?.aitHeadingView?.text = aitHeading
+            //37
+            when (aitHeading) {
+                "АЛСН" -> binding?.aitDescriptionView?.text = getString(R.string.alsn_description)
+                "САУТ" -> binding?.aitDescriptionView?.text = getString(R.string.saut_description)
+                "КТСМ" -> binding?.aitDescriptionView?.text = getString(R.string.ktsm_description)
+            }
         }
     }
 }
