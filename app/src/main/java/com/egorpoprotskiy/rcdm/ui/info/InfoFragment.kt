@@ -34,6 +34,7 @@ class InfoFragment : Fragment() {
     }
     //31.2 Привязка адаптера к АиТ и вызов этой функции в onViewCrated
     private fun navigationAitToAitDetailFragment() {
+        //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
         val myDataset = AitDataSource(requireContext()).loadAitDataSourse()
         val adapter = AitListAdapter(myDataset) {
             //33 Навигация во фрагмент деталей АиТ
