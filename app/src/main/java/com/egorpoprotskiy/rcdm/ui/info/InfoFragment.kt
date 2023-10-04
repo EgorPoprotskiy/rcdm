@@ -30,10 +30,14 @@ class InfoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //31.2 Привязка адаптера к АиТ
+        navigationAitToAitDetailFragment()
+    }
+    //31.2 Привязка адаптера к АиТ и вызов этой функции в onViewCrated
+    private fun navigationAitToAitDetailFragment() {
         val myDataset = AitDataSource().loadAitDataSourse()
-        val adapter = AitListAdapter(myDataset) { selectedItem ->
-            val action = InfoFragmentDirections.actionNavigationInfoToAitDetailFragment()
+        val adapter = AitListAdapter(myDataset) {
+            //33 Навигация во фрагмент деталей АиТ
+            val action = InfoFragmentDirections.actionNavigationInfoToAitDetailFragment(it.aitHeading)
             this.findNavController().navigate(action)
         }
         binding.recyclerViewAit.adapter = adapter

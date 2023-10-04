@@ -16,7 +16,7 @@
         android:textStyle="bold"
         android:textSize="@dimen/marginAll3"
         tools:text="Заголовок"
-        android:text="123"/>
+        android:text="Заголовок"/>
 
     <TextView
         android:id="@+id/ait_description"
@@ -28,6 +28,6 @@
         app:layout_constraintVertical_bias="0.0"
         android:textSize="@dimen/marginAll"
         tools:text="Описание"
-        android:text="234"/>
+        android:text="Описание"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
