@@ -13,7 +13,22 @@
         <action
             android:id="@+id/action_navigation_info_to_aitDetailFragment"
             app:destination="@id/aitDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_info_to_psDetailFragment"
+            app:destination="@id/psDetailFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/psDetailFragment"
+        android:name="com.egorpoprotskiy.rcdm.ui.info.PsDetailFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_ps_detail" >
+        <argument
+            android:name="psHeading"
+            app:argType="string" />
+
+    </fragment>
+
     <fragment
         android:id="@+id/aitDetailFragment"
         android:name="com.egorpoprotskiy.rcdm.ui.info.AitDetailFragment"
@@ -72,4 +87,5 @@
             android:name="item_id"
             app:argType="integer" />
     </fragment>
+
 </navigation>

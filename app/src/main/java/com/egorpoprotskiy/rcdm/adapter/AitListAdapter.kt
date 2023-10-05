@@ -7,7 +7,7 @@ import com.egorpoprotskiy.rcdm.databinding.ItemAit1Binding
 import com.egorpoprotskiy.rcdm.model.Ait
 
 //31 Создание адаптера для АиТ
-class AitListAdapter(private val dataset: List<Ait>, private val onAitClicked: (Ait) -> Unit, ) :
+class AitListAdapter(private val dataset: List<Ait>, private val onAitClicked: (Ait) -> Unit ) :
     RecyclerView.Adapter<AitListAdapter.AitViewHolder>() {
 
     override fun onCreateViewHolder(
