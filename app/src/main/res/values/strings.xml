@@ -1,38 +1,37 @@
 <resources>
     <string name="app_name">rcdm</string>
-    <!--    BottomNavigationView-->
+<!--    BottomNavigationView-->
     <string name="title_info">ИНФО</string>
     <string name="title_easd">ЕАСД</string>
     <string name="title_notes">ЗАМЕТКИ</string>
 
-    <!--    ЗАМЕТКИ-->
+<!--    ЗАМЕТКИ-->
     <string name="details">Детали</string>
-    <!--    Заголовки полей для заметок-->
+<!--    Заголовки полей для заметок-->
     <string name="heading">Тема</string>
     <string name="description">Описание</string>
-    <!--    Всплывающее окно при удалении заметки-->
+<!--    Всплывающее окно при удалении заметки-->
     <string name="delete_question">Вы уверены, что хотите удалить?</string>
     <string name="cancel">Отмена</string>
-    <!--    Цвет-->
+<!--    Цвет-->
     <string name="orange">orange</string>
     <string name="blue">blue</string>
     <string name="green">green</string>
     <string name="pink">pink</string>
     <string name="defaultColor">default</string>
-    <!--    Добавление и редактирование заметки-->
+<!--    Добавление и редактирование заметки-->
     <string name="add_new_note">Добавить новую заметку</string>
     <string name="edit_fragment_note">Редактировать заметку</string>
     <string name="save_button">Сохранить</string>
     <string name="add_button">Добавить</string>
-    <!--    расшаривание заметки-->
+<!--    расшаривание заметки-->
     <string name="share_note">Поделиться заметкой</string>
     <string name="note_details">Тема: %1$s; Описание: %2$s</string>
 
-    <!--    INFO-->
-
-    <!--    Автоматика и телемаханика-->
+<!--    INFO-->
+<!--    Автоматика и телемаханика-->
     <string name="ait_heading">АиТ тема</string>
-    <!--    АЛСН-->
+<!--    АЛСН-->
     <string name="alsn_heading">АЛСН</string>
     <string name="alsn_description">\tАвтоматическая локомотивная сигнализация непрерывного действия.\n\n
         Длительность первого интервал в коде АЛСН:\n
@@ -44,7 +43,7 @@
         Ток АЛСН (при автономной тяге):\n
         менее 1,0А\n
         более 30А</string>
-    <!--    САУТ-->
+<!--    САУТ-->
     <string name="saut_heading">САУТ</string>
     <string name="saut_description">\tСистема втоматического управления торможением поезда.\n\n
         Амплитуда тока в шлейфе САУТ менее 0,4 – критично.\n\n
@@ -60,13 +59,28 @@
         Комбинации частот и шлейфов не соответствует маршруту и условиям движения – опасное нарушение.\n\n
         Прерывание тока (дребезг) в шлейфе устройства САУТ - критичное нарушение.\n\n
     </string>
-    <!--    КТСМ-->
+<!--    КТСМ-->
     <string name="ktsm_heading">КТСМ</string>
     <string name="ktsm_description">\tКомплекс технических средств монторинга нагрева букс вагонов.\n\n</string>
-    <!-- TODO: Remove or change this placeholder text -->
+<!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 <!--    Путеизмерение-->
     <string name="ps_heading">ПС тема</string>
+<!--    Уровень-->
+    <string name="uroven_heading">Уровень</string>
+    <string name="uroven_description">Величины отступлений</string>
+<!--    Перекос-->
+    <string name="perecos_heading">Перекос</string>
+    <string name="perecos_description">Величины отступлений</string>
+<!--    Рихтовка-->
+    <string name="rihtovka_heading">Угол в плане</string>
+    <string name="rihtovka_description">Величины отступлений</string>
+<!--    Шаблон-->
+    <string name="shablon_heading">Шаблон</string>
+    <string name="shablon_description">Величины отступлений</string>
+<!--    Просадки-->
+    <string name="prosadka_heading">Просадка</string>
+    <string name="prosadka_description">Величины отступлений</string>
 
 </resources>
