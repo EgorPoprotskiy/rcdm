@@ -36,5 +36,4 @@
             tools:text="Описание" />
 
     </androidx.core.widget.NestedScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

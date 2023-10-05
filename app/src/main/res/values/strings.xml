@@ -29,6 +29,7 @@
     <string name="note_details">Тема: %1$s; Описание: %2$s</string>
 
     <!--    INFO-->
+
     <!--    Автоматика и телемаханика-->
     <string name="ait_heading">АиТ тема</string>
     <!--    АЛСН-->
@@ -64,5 +65,8 @@
     <string name="ktsm_description">\tКомплекс технических средств монторинга нагрева букс вагонов.\n\n</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    Путеизмерение-->
+    <string name="ps_heading">ПС тема</string>
 
 </resources>
