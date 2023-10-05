@@ -11,15 +11,16 @@
         android:id="@+id/recycler_view_ait"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
         android:padding="6dp"
         android:scrollbars="horizontal"
-        android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintVertical_bias="1.0"
-        tools:listitem="@layout/item_ait_1"/>
+        tools:listitem="@layout/item_ait_1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
