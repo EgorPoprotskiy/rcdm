@@ -17,14 +17,6 @@ class AitDetailFragment : Fragment() {
     // 32 Объявление binding
     private var _binding: FragmentAitDetailBinding? = null
     private val binding get() = _binding
-    //32 Объявление переменной navArgs(). Аргументы должны присутствовать в nav_graph этих фрагментов
-    private val navigationArgs: AitDetailFragmentArgs by navArgs()
-    //32 Привязка данных к TextView
-    private lateinit var ait: Ait
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,7 +27,7 @@ class AitDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //34
+        //34 Получение аргумента от АиТ
         val arguments = arguments
         if (arguments != null && arguments.containsKey("aitHeading")) {
             val aitHeading = arguments.getString("aitHeading")

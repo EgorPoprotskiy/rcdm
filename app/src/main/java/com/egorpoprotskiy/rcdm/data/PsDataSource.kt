@@ -3,7 +3,7 @@ package com.egorpoprotskiy.rcdm.data
 import android.content.Context
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.model.Ps
-
+//40 Создание модели данных для путеизмерения
 class PsDataSource(private val context: Context) {
     fun loadPsDataSource(): List<Ps>{
         return listOf<Ps>(
