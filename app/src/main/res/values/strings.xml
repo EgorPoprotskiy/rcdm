@@ -83,4 +83,11 @@
     <string name="prosadka_heading">Просадка</string>
     <string name="prosadka_description">Величины отступлений</string>
 
+<!--    Дефектокопия-->
+    <string name="nk_heading">НК тема</string>
+<!--    Контактная сеть-->
+    <string name="ks_heading">КС тема</string>
+<!--    Видеоконтроль-->
+    <string name="video_headin">Видео тема</string>
+
 </resources>
