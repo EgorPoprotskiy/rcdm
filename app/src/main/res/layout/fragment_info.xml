@@ -75,13 +75,29 @@
         android:textStyle="bold"
         android:textSize="@dimen/heading"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_ks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ks"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_ks_1" />
+
     <TextView
         android:id="@+id/tv_nk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_ks"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_ks"
         android:layout_marginTop="@dimen/top"
         android:text="@string/nk_heading"
         android:textAlignment="center"

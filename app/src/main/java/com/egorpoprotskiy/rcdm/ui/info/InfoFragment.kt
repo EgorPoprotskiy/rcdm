@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.egorpoprotskiy.rcdm.adapter.AitListAdapter
+import com.egorpoprotskiy.rcdm.adapter.KsListAdapter
 import com.egorpoprotskiy.rcdm.adapter.PsListAdapter
 import com.egorpoprotskiy.rcdm.data.AitDataSource
+import com.egorpoprotskiy.rcdm.data.KsDataSource
 import com.egorpoprotskiy.rcdm.data.PsDataSource
 import com.egorpoprotskiy.rcdm.databinding.FragmentInfoBinding
 
@@ -32,8 +34,9 @@ class InfoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         navigationAitToAitDetailFragment()
         navigationPsToPsDetailFragment()
+        navigationKsToKsDetailFragment()
     }
-    //31.2 Привязка адаптера к АиТ и вызов этой функции в onViewCrated
+//    31.2 Привязка адаптера к АиТ и вызов этой функции в onViewCrated
     private fun navigationAitToAitDetailFragment() {
         //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
         val myDatasetAit = AitDataSource(requireContext()).loadAitDataSourse()
@@ -56,6 +59,18 @@ class InfoFragment : Fragment() {
     binding.recyclerViewPs.adapter = adapter
     binding.recyclerViewPs.setHasFixedSize(true)
     }
+
+//    47 Привязка адаптера к КС и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
+    private fun navigationKsToKsDetailFragment() {
+        val myDatasetKs = KsDataSource(requireContext()).loadKsDataSource()
+    val adapter = KsListAdapter(myDatasetKs) {
+        val action = InfoFragmentDirections.actionNavigationInfoToKsDetailFragment(it.ksHeading)
+        this.findNavController().navigate(action)
+    }
+    binding.recyclerViewKs.adapter = adapter
+    binding.recyclerViewKs.setHasFixedSize(true)
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

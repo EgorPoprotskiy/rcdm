@@ -86,16 +86,16 @@
     <!--    Дефектокопия-->
     <string name="nk_heading">ДЕФЕКТОСКОПИЯ</string>
     <!--    Отступление 1-->
-    <string name="nk_bag1_heading">Отступление 1</string>
+    <string name="nk_bag1_heading">Отступл 1</string>
     <string name="nk_bag1_description">Описание 1</string>
     <!--    Отступление 2-->
-    <string name="nk_bag2_heading">Отступление 2</string>
+    <string name="nk_bag2_heading">Отступл 2</string>
     <string name="nk_bag2_description">Описание 2</string>
     <!--    Отступление 3-->
-    <string name="nk_bag3_heading">Отступление 3</string>
+    <string name="nk_bag3_heading">Отступл 3</string>
     <string name="nk_bag3_description">Описание 3</string>
     <!--    Отступление 4-->
-    <string name="nk_bag4_heading">Отступление 4</string>
+    <string name="nk_bag4_heading">Отступл 4</string>
     <string name="nk_bag4_description">Описание 4</string>
 
     <!--    Контактная сеть-->
@@ -104,7 +104,7 @@
     <string name="ks_zigzag_heading">Зигзаг</string>
     <string name="ks_zigzag_description">Величина отступления</string>
     <!--    Провисание-->
-    <string name="ks_bag2_heading">Отступление 2</string>
+    <string name="ks_bag2_heading">Отступл 2</string>
     <string name="ks_bag2_description">Описание 2</string>
 
 
