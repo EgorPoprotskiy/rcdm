@@ -83,40 +83,40 @@
     <string name="prosadka_heading">Просадка</string>
     <string name="prosadka_description">Величины отступлений</string>
 
-<!--    Дефектокопия-->
+    <!--    Дефектокопия-->
     <string name="nk_heading">ДЕФЕКТОСКОПИЯ</string>
-<!--    Отступление 1-->
+    <!--    Отступление 1-->
     <string name="nk_bag1_heading">Отступление 1</string>
     <string name="nk_bag1_description">Описание 1</string>
-<!--    Отступление 2-->
+    <!--    Отступление 2-->
     <string name="nk_bag2_heading">Отступление 2</string>
     <string name="nk_bag2_description">Описание 2</string>
-<!--    Отступление 3-->
+    <!--    Отступление 3-->
     <string name="nk_bag3_heading">Отступление 3</string>
     <string name="nk_bag3_description">Описание 3</string>
-<!--    Отступление 4-->
+    <!--    Отступление 4-->
     <string name="nk_bag4_heading">Отступление 4</string>
     <string name="nk_bag4_description">Описание 4</string>
 
-<!--    Контактная сеть-->
+    <!--    Контактная сеть-->
     <string name="ks_heading">КОНТАКТНАЯ СЕТЬ</string>
-<!--    Зигзаг-->
+    <!--    Зигзаг-->
     <string name="ks_zigzag_heading">Зигзаг</string>
     <string name="ks_zigzag_description">Величина отступления</string>
-<!--    Провисание-->
+    <!--    Провисание-->
     <string name="ks_bag2_heading">Отступление 2</string>
     <string name="ks_bag2_description">Описание 2</string>
 
 
-<!--    Видеоконтроль-->
+    <!--    Видеоконтроль-->
     <string name="video_headin">ВИДЕОКОНТРОЛЬ</string>
-<!--    Величина зазора-->
+    <!--    Величина зазора-->
     <string name="video_zazor_heading">Зазор</string>
     <string name="video_zazor_description">Величина отступления</string>
-<!--    Маячки-->
+    <!--    Маячки-->
     <string name="video_mark_heading">Метка</string>
     <string name="video_mark_description">Величина отступления</string>
-<!--    Болты-->
+    <!--    Болты-->
     <string name="video_bolt_heading">Болты</string>
     <string name="video_bolt_description">Величина отступления</string>
 

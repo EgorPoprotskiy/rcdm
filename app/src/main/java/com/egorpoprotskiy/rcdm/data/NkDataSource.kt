@@ -3,7 +3,7 @@ package com.egorpoprotskiy.rcdm.data
 import android.content.Context
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.model.Nk
-
+//45
 class NkDataSource(private val context: Context) {
     fun loadNkDataSource(): List<Nk> {
         return listOf(

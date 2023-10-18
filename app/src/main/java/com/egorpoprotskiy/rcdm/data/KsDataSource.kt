@@ -3,7 +3,7 @@ package com.egorpoprotskiy.rcdm.data
 import android.content.Context
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.model.Ks
-
+//45
 class KsDataSource(private val context: Context) {
     fun loadKsDataSource(): List<Ks> {
         return listOf(
