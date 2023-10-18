@@ -14,14 +14,14 @@
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ait_color"
+        android:id="@+id/video_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_200"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/ait_label"
+            android:id="@+id/video_label"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -31,14 +31,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="AiT" />
+            tools:text="VIDEO" />
 
         <View
             android:layout_width="135dp"
             android:layout_height="2dp"
             android:layout_marginTop="51dp"
             android:background="?attr/dividerHorizontal"
-            app:layout_constraintTop_toBottomOf="@id/ait_label"
+            app:layout_constraintTop_toBottomOf="@id/video_label"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="MissingConstraints" />

@@ -88,6 +88,6 @@
 <!--    Контактная сеть-->
     <string name="ks_heading">КОНТАКТНАЯ СЕТЬ</string>
 <!--    Видеоконтроль-->
-    <string name="video_heading">ВИДЕОКОНТРОЛЬ</string>
+    <string name="video_headin">ВИДЕОКОНТРОЛЬ</string>
 
 </resources>
