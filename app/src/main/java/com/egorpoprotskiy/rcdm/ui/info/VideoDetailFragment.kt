@@ -20,4 +20,19 @@ class VideoDetailFragment : Fragment() {
         _binding = FragmentVideoDetailBinding.inflate(inflater, container, false)
         return binding?.root
     }
+
+    //51 Получение аргумента для Видео от IndoFragment
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val arguments = arguments
+        if (arguments != null && arguments.containsKey("videoHeading")) {
+            val videoHeading = arguments.getString("videoHeading")
+            binding?.videoHeadingView?.text = videoHeading
+            when (videoHeading) {
+                "Зазор" -> binding?.videoDescriptionView?.text = getString(R.string.video_zazor_description)
+                "Метка" -> binding?.videoDescriptionView?.text = getString(R.string.video_mark_description)
+                "Болты" -> binding?.videoDescriptionView?.text = getString(R.string.video_bolt_description)
+            }
+        }
+    }
 }

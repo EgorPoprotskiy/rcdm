@@ -19,4 +19,19 @@ class KsDetailFragment : Fragment() {
         _binding = FragmentKsDetailBinding.inflate(inflater, container, false)
         return binding?.root
     }
+
+    //51 Получение аргумента
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val arguments = arguments
+        if (arguments != null && arguments.containsKey("ksHeading")) {
+            val nkHeading = arguments.getString("ksHeading")
+            binding?.ksHeadingView?.text = nkHeading
+            when (nkHeading) {
+                "Зигзаг" -> binding?.ksDescriptionView?.text = getString(R.string.ks_zigzag_description)
+                "Отступл 2" -> binding?.ksDescriptionView?.text = getString(R.string.ks_bag2_description)
+            }
+
+        }
+    }
 }
