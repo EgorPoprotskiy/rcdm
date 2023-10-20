@@ -120,4 +120,62 @@
     <string name="video_bolt_heading">Болты</string>
     <string name="video_bolt_description">Величина отступления</string>
 
+<!--    ЕАСД-->
+<!--    Служба Ш-->
+    <string name="sh_sluzhba">Служба Ш</string>
+    <string name="sh">Ш - ФИО</string>
+    <string name="shch2">ШЧ-2 - ФИО</string>
+    <string name="shch3">ШЧ-3 - ФИО</string>
+    <string name="shch4">ШЧ-4 - ФИО</string>
+    <string name="shch6">ШЧ-6 - ФИО</string>
+    <string name="shch7">ШЧ-7 - ФИО</string>
+    <string name="shch8">ШЧ-8 - ФИО</string>
+    <string name="shch9">ШЧ-9 - ФИО</string>
+    <string name="shch10">ШЧ-10 - ФИО</string>
+    <string name="shch12">ШЧ-12 - ФИО</string>
+    <string name="shch13">ШЧ-13 - ФИО</string>
+    <string name="shch14">ШЧ-14 - ФИО</string>
+<!--    Служба П-->
+    <string name="p_sluzhba">Служба П</string>
+    <string name="p">П - ФИО</string>
+    <string name="pch1">ПЧ-1 - ФИО</string>
+    <string name="pch2">ПЧ-2 - ФИО</string>
+    <string name="pch5">ПЧ-5 - ФИО</string>
+    <string name="pch6">ПЧ-6 - ФИО</string>
+    <string name="pch7">ПЧ-7 - ФИО</string>
+    <string name="pch8">ПЧ-8 - ФИО</string>
+    <string name="pch9">ПЧ-9 - ФИО</string>
+    <string name="pch10">ПЧ-10 - ФИО</string>
+    <string name="pch11">ПЧ-11 - ФИО</string>
+    <string name="pch12">ПЧ-12 - ФИО</string>
+    <string name="pch13">ПЧ-13 - ФИО</string>
+    <string name="pch14">ПЧ-14 - ФИО</string>
+    <string name="pch15">ПЧ-15 - ФИО</string>
+    <string name="pch16">ПЧ-16 - ФИО</string>
+    <string name="pch17">ПЧ-17 - ФИО</string>
+    <string name="pch18">ПЧ-18 - ФИО</string>
+    <string name="pch19">ПЧ-19 - ФИО</string>
+    <string name="pch20">ПЧ-20 - ФИО</string>
+    <string name="pch21">ПЧ-21 - ФИО</string>
+    <string name="pch22">ПЧ-22 - ФИО</string>
+    <string name="pch23">ПЧ-23 - ФИО</string>
+    <string name="pch24">ПЧ-24 - ФИО</string>
+<!--    Служба Э-->
+    <string name="e_sluzhba">Служба Э</string>
+    <string name="e">Э - ФИО</string>
+    <string name="ech1">ЭЧ-1 - ФИО</string>
+    <string name="ech2">ЭЧ-2 - ФИО</string>
+    <string name="ech3">ЭЧ-3 - ФИО</string>
+<!--    Н-->
+    <string name="upravlenie_dvzd">Управление ДВЖД</string>
+    <string name="n">Н - Вейде</string>
+    <string name="nz">НЗ - ФИО</string>
+    <string name="РБ">РБ - ФИО</string>
+    <string name="ДЦУП">ДЦУП - ФИО</string>
+<!--    РЦДМ-->
+    <string name="rcdm">РЦДМ</string>
+    <string name="rcdmNach">РЦДМ - Перегуда Роман Валерьевич</string>
+    <string name="rcdmz1">РЦДМЗ1 - Дягилев Денис Леонидович</string>
+    <string name="rcdmz2">РЦДМЗ2 - Шведко Николай Давидович</string>
+
 </resources>
