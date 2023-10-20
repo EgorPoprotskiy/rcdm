@@ -93,15 +93,14 @@ class InfoFragment : Fragment() {
 
     //    49 Привязка адаптера к Видео и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
     private fun navigationVideoToVideoDetailFragment() {
-        val myDataSet = VideoDataSource(requireContext()).loadVideoDataSource()
-        val adapter = VideoListAdapter(myDataSet) {
+        val myDatasetVideo = VideoDataSource(requireContext()).loadVideoDataSource()
+        val adapter = VideoListAdapter(myDatasetVideo) {
             val action = InfoFragmentDirections.actionNavigationInfoToVideoDetailFragment(it.videoHeading)
             this.findNavController().navigate(action)
         }
         binding.recyclerViewVideo.adapter = adapter
         binding.recyclerViewVideo.setHasFixedSize(true)
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
