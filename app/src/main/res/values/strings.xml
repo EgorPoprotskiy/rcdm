@@ -170,8 +170,8 @@
     <string name="upravlenie_dvzd">Управление ДВЖД</string>
     <string name="n">Н - Вейде</string>
     <string name="nz">НЗ - ФИО</string>
-    <string name="РБ">РБ - ФИО</string>
-    <string name="ДЦУП">ДЦУП - ФИО</string>
+    <string name="rb">РБ - ФИО</string>
+    <string name="dcup">ДЦУП - ФИО</string>
 <!--    РЦДМ-->
     <string name="rcdm">РЦДМ</string>
     <string name="rcdmNach">РЦДМ - Перегуда Роман Валерьевич</string>

@@ -6,44 +6,38 @@ import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 import com.egorpoprotskiy.rcdm.R
-import com.egorpoprotskiy.rcdm.data.EasdGroupeDataSource
-import com.egorpoprotskiy.rcdm.model.EasdGroup
+import com.egorpoprotskiy.rcdm.model.EasdChapter
 
 //50
 class ExpandableListAdapter internal constructor(
         private val context: Context,
-        private val chapterList: List<String>,
-        private val topicsList: HashMap<String, List<String>>
+    private val chapters: List<EasdChapter>
 ) : BaseExpandableListAdapter() {
 
     override fun getGroupCount(): Int {
-        return chapterList.size
+        return chapters.size
     }
 
     override fun getChildrenCount(groupPosition: Int): Int {
-        return this.topicsList[this.chapterList[groupPosition]]!!.size
+        return chapters[groupPosition].topicsName.size
     }
 
     override fun getGroup(groupPosition: Int): Any {
-        return chapterList[groupPosition]
+        return chapters[groupPosition].chapterName
     }
 
     override fun getChild(groupPosition: Int, childPosition: Int): Any {
-        return this.topicsList[this.chapterList[groupPosition]]!![childPosition]
+        return chapters[groupPosition].topicsName[childPosition]
     }
-
     override fun getGroupId(groupPosition: Int): Long {
         return groupPosition.toLong()
     }
-
     override fun getChildId(groupPosition: Int, childPosition: Int): Long {
         return  childPosition.toLong()
     }
-
     override fun hasStableIds(): Boolean {
         return false
     }
-
     override fun getGroupView(
         groupPosition: Int,
         isExpanded: Boolean,
@@ -60,7 +54,6 @@ class ExpandableListAdapter internal constructor(
         tvChapter.setText(chapterTitle)
         return convertView
     }
-
     override fun getChildView(
         groupPosition: Int,
         childPosition: Int,
@@ -78,7 +71,6 @@ class ExpandableListAdapter internal constructor(
         tvTopics.setText(topicsTitle)
         return convertView
     }
-
     override fun isChildSelectable(groupPosition: Int, childPosition: Int): Boolean {
         return true
     }
