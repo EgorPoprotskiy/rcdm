@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="150dp"
-    android:layout_height="150dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/start"
     android:layout_marginTop="@dimen/top"
     android:layout_marginEnd="@dimen/end"
@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/ps_label"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -34,9 +34,9 @@
             tools:text="PS" />
 
         <View
-            android:layout_width="135dp"
+            android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_marginTop="51dp"
+            android:layout_marginTop="16dp"
             android:background="?attr/dividerHorizontal"
             app:layout_constraintTop_toBottomOf="@id/ps_label"
             app:layout_constraintStart_toStartOf="parent"

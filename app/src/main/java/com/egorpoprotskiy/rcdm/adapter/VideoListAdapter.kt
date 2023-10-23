@@ -3,7 +3,7 @@ package com.egorpoprotskiy.rcdm.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.egorpoprotskiy.rcdm.databinding.ItemVideo1Binding
+import com.egorpoprotskiy.rcdm.databinding.ItemPs1Binding
 import com.egorpoprotskiy.rcdm.model.Video
 //48
 class VideoListAdapter(
@@ -15,7 +15,7 @@ class VideoListAdapter(
         parent: ViewGroup,
         viewType: Int
     ): VideoListAdapter.VideoViewHolder {
-        return VideoViewHolder(ItemVideo1Binding.inflate(LayoutInflater.from(parent.context)))
+        return VideoViewHolder(ItemPs1Binding.inflate(LayoutInflater.from(parent.context)))
     }
 
     override fun onBindViewHolder(holder: VideoListAdapter.VideoViewHolder, position: Int) {
@@ -28,10 +28,10 @@ class VideoListAdapter(
 
     override fun getItemCount(): Int = dataset.size
 
-    inner class VideoViewHolder(private var binding: ItemVideo1Binding) :
+    inner class VideoViewHolder(private var binding: ItemPs1Binding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(video: Video) {
-            binding.videoLabel.text = video.videoHeading
+            binding.psLabel.text = video.videoHeading
         }
     }
 }

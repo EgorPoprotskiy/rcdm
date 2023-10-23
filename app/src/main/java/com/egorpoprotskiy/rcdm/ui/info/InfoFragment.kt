@@ -43,7 +43,7 @@ class InfoFragment : Fragment() {
 //        navigationNkToNkDetailFragment()
 //        navigationVideoToVideoDetailFragment()
     }
-
+    //54 Привязка адаптера к общему RecyclerView
     private fun navigationInfoAllSystemToOneSystem() {
         val myDataset = AllSystemDataSource(requireContext()).loadAllSystemDataSource()
         val adapter = AllSystemListAdapter(myDataset) {
