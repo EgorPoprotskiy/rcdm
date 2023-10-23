@@ -19,7 +19,6 @@ class AitListAdapter(private val dataset: List<Ait>, private val onAitClicked: (
 
     override fun onBindViewHolder(holder: AitViewHolder, position: Int) {
         val current = dataset[position]
-//        holder.aitHeading.text = context.resources.getText(item.aitHeading)
         holder.bind(current)
         //данный слушатель кликов срабатывает на всём квадратике
         holder.itemView.setOnClickListener {
@@ -31,11 +30,7 @@ class AitListAdapter(private val dataset: List<Ait>, private val onAitClicked: (
 
     inner class AitViewHolder(private var binding: ItemPs1Binding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(ait: Ait) {
-            binding.psLabel.text = ait.aitHeading.toString()
-            //данный слушатель кликов срабатывает только на тексте
-//            binding.aitLabel.setOnClickListener {
-//                onAitClicked(ait)
-//            }
+            binding.psLabel.text = ait.aitHeading
         }
     }
 }
