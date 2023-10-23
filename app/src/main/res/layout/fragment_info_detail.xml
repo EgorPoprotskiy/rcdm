@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.info.VideoDetailFragment">
+    tools:context=".ui.info.InfoDetailFragment">
 
     <TextView
-        android:id="@+id/video_heading_view"
+        android:id="@+id/heading_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginAll2"
@@ -25,10 +25,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/video_heading_view">
+        app:layout_constraintTop_toBottomOf="@+id/heading_view">
 
         <TextView
-            android:id="@+id/video_description_View"
+            android:id="@+id/description_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Описание"
