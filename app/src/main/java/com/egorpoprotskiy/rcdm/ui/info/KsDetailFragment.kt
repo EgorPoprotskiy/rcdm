@@ -31,7 +31,6 @@ class KsDetailFragment : Fragment() {
                 "Зигзаг" -> binding?.ksDescriptionView?.text = getString(R.string.ks_zigzag_description)
                 "Отступл 2" -> binding?.ksDescriptionView?.text = getString(R.string.ks_bag2_description)
             }
-
         }
     }
 }
