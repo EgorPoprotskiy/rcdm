@@ -11,20 +11,8 @@
         android:label="@string/title_info"
         tools:layout="@layout/fragment_info" >
         <action
-            android:id="@+id/action_navigation_info_to_aitDetailFragment"
-            app:destination="@id/aitDetailFragment" />
-        <action
-            android:id="@+id/action_navigation_info_to_psDetailFragment"
-            app:destination="@id/psDetailFragment" />
-        <action
-            android:id="@+id/action_navigation_info_to_ksDetailFragment"
-            app:destination="@id/ksDetailFragment" />
-        <action
-            android:id="@+id/action_navigation_info_to_videoDetailFragment"
-            app:destination="@id/videoDetailFragment" />
-        <action
-            android:id="@+id/action_navigation_info_to_nkDetailFragment"
-            app:destination="@id/nkDetailFragment" />
+            android:id="@+id/action_navigation_info_to_oneSystemFragment"
+            app:destination="@id/oneSystemFragment" />
     </fragment>
 
     <fragment
@@ -120,6 +108,30 @@
         <argument
             android:name="item_id"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/oneSystemFragment"
+        android:name="com.egorpoprotskiy.rcdm.ui.info.OneSystemFragment"
+        android:label="fragment_one_system"
+        tools:layout="@layout/fragment_one_system" >
+        <argument
+            android:name="allSystem"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_oneSystemFragment_to_aitDetailFragment"
+            app:destination="@id/aitDetailFragment" />
+        <action
+            android:id="@+id/action_oneSystemFragment_to_psDetailFragment"
+            app:destination="@id/psDetailFragment" />
+        <action
+            android:id="@+id/action_oneSystemFragment_to_ksDetailFragment"
+            app:destination="@id/ksDetailFragment" />
+        <action
+            android:id="@+id/action_oneSystemFragment_to_videoDetailFragment"
+            app:destination="@id/videoDetailFragment" />
+        <action
+            android:id="@+id/action_oneSystemFragment_to_nkDetailFragment"
+            app:destination="@id/nkDetailFragment" />
     </fragment>
 
 </navigation>
