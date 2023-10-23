@@ -44,7 +44,9 @@ class InfoDetailFragment : Fragment() {
                 "Уровень" -> binding?.descriptionView?.text = getString(R.string.uroven_description)
                 "Перекос" -> binding?.descriptionView?.text = getString(R.string.perecos_description)
                 "Угол в плане" -> binding?.descriptionView?.text = getString(R.string.rihtovka_description)
-                "Шаблон" -> binding?.descriptionView?.text = getString(R.string.shablon_description)
+                "Шаблон" -> {
+                    binding?.descriptionView?.text = getString(R.string.shablon_description)
+                }
                 "Просадка" -> binding?.descriptionView?.text = getString(R.string.prosadka_description)
 
                 "Зазор" -> binding?.descriptionView?.text = getString(R.string.video_zazor_description)

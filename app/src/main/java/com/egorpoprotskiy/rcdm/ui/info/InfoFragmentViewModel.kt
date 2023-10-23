@@ -6,6 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.egorpoprotskiy.rcdm.data.AitDataSource
 import com.egorpoprotskiy.rcdm.model.Ait
 
-class InfoFragmentViewModel(private val aitDataSource: AitDataSource) : ViewModel() {
-//    val aitItem: LiveData<List<Ait>> = aitDataSource.loadAitDataSourse()
+class InfoFragmentViewModel : ViewModel() {
+
 }
