@@ -35,68 +35,157 @@ class OneSystemFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        navigationAitToAitDetailFragment()
-        navigationPsToPsDetailFragment()
-        navigationKsToKsDetailFragment()
-        navigationNkToNkDetailFragment()
-        navigationVideoToVideoDetailFragment()
+        //55 Получение аргумента от InfoFragment
+        val arguments = arguments
+        if (arguments != null && arguments.containsKey("allSystem")) {
+            val allSystem = arguments.getString("allSystem")
+//            binding?.aitHeadingView?.text = aitHeading
+            //55 Навигация для фрагмента с деталями
+            when (allSystem) {
+                "АВТОМАТИКА И ТЕЛЕМЕХАНИКА" -> {
+                    //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
+                    val myDatasetPs = AitDataSource(requireContext()).loadAitDataSourse()
+                    val adapter = AitListAdapter(myDatasetPs) {
+                        //33 Навигация во фрагмент деталей АиТ
+                        val action =
+                            OneSystemFragmentDirections.actionOneSystemFragmentToAitDetailFragment(
+                                it.aitHeading
+                            )
+                        this.findNavController().navigate(action)
+                    }
+                    binding?.recyclerViewOneSystem?.adapter = adapter
+                    binding?.recyclerViewOneSystem?.setHasFixedSize(true)
+                    binding?.tvOneSystem?.text = allSystem
+                }
+
+                "ПУТЕИЗМЕРЕНИЕ" -> {
+                    //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
+                    val myDatasetPs = PsDataSource(requireContext()).loadPsDataSource()
+                    val adapter = PsListAdapter(myDatasetPs) {
+                        //33 Навигация во фрагмент деталей АиТ
+                        val action =
+                            OneSystemFragmentDirections.actionOneSystemFragmentToAitDetailFragment(
+                                it.psHeading
+                            )
+                        this.findNavController().navigate(action)
+                    }
+                    binding?.recyclerViewOneSystem?.adapter = adapter
+                    binding?.recyclerViewOneSystem?.setHasFixedSize(true)
+                    binding?.tvOneSystem?.text = allSystem
+                }
+
+                "ДЕФЕКТОСКОПИЯ" -> {
+                    //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
+                    val myDatasetPs = NkDataSource(requireContext()).loadNkDataSource()
+                    val adapter = NkListAdapter(myDatasetPs) {
+                        //33 Навигация во фрагмент деталей АиТ
+                        val action =
+                            OneSystemFragmentDirections.actionOneSystemFragmentToAitDetailFragment(
+                                it.nkHeading
+                            )
+                        this.findNavController().navigate(action)
+                    }
+                    binding?.recyclerViewOneSystem?.adapter = adapter
+                    binding?.recyclerViewOneSystem?.setHasFixedSize(true)
+                    binding?.tvOneSystem?.text = allSystem
+                }
+
+                "КОНТАКТНАЯ СЕТЬ" -> {
+                    //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
+                    val myDatasetPs = KsDataSource(requireContext()).loadKsDataSource()
+                    val adapter = KsListAdapter(myDatasetPs) {
+                        //33 Навигация во фрагмент деталей АиТ
+                        val action =
+                            OneSystemFragmentDirections.actionOneSystemFragmentToAitDetailFragment(
+                                it.ksHeading
+                            )
+                        this.findNavController().navigate(action)
+                    }
+                    binding?.recyclerViewOneSystem?.adapter = adapter
+                    binding?.recyclerViewOneSystem?.setHasFixedSize(true)
+                    binding?.tvOneSystem?.text = allSystem
+                }
+
+                "ВИДЕОКОНТРОЛЬ" -> {
+                    //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
+                    val myDatasetPs = VideoDataSource(requireContext()).loadVideoDataSource()
+                    val adapter = VideoListAdapter(myDatasetPs) {
+                        //33 Навигация во фрагмент деталей АиТ
+                        val action =
+                            OneSystemFragmentDirections.actionOneSystemFragmentToAitDetailFragment(
+                                it.videoHeading
+                            )
+                        this.findNavController().navigate(action)
+                    }
+                    binding?.recyclerViewOneSystem?.adapter = adapter
+                    binding?.recyclerViewOneSystem?.setHasFixedSize(true)
+                    binding?.tvOneSystem?.text = allSystem
+                }
+            }
+        }
+
+//        navigationAitToAitDetailFragment()
+//        navigationPsToPsDetailFragment()
+//        navigationKsToKsDetailFragment()
+//        navigationNkToNkDetailFragment()
+//        navigationVideoToVideoDetailFragment()
     }
 
-    //    31.2 Привязка адаптера к АиТ и вызов этой функции в onViewCrated
-    private fun navigationAitToAitDetailFragment() {
-        //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
-        val myDatasetAit = AitDataSource(requireContext()).loadAitDataSourse()
-        val adapter = AitListAdapter(myDatasetAit) {
-            //33 Навигация во фрагмент деталей АиТ
-            val action =
-                OneSystemFragmentDirections.actionOneSystemFragmentToAitDetailFragment(it.aitHeading)
-            this.findNavController().navigate(action)
-        }
-        binding?.recyclerViewAit?.adapter = adapter
-        binding?.recyclerViewAit?.setHasFixedSize(true)
-    }
-
-    //    41 Привязка адаптера к ПС и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
-    private fun navigationPsToPsDetailFragment() {
-        val myDatasetPs = PsDataSource(requireContext()).loadPsDataSource()
-        val adapter = PsListAdapter(myDatasetPs) {
-            val action = OneSystemFragmentDirections.actionOneSystemFragmentToPsDetailFragment(it.psHeading)
-            this.findNavController().navigate(action)
-        }
-        binding?.recyclerViewPs?.adapter = adapter
-        binding?.recyclerViewPs?.setHasFixedSize(true)
-    }
-
-    //    47 Привязка адаптера к КС и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
-    private fun navigationKsToKsDetailFragment() {
-        val myDatasetKs = KsDataSource(requireContext()).loadKsDataSource()
-        val adapter = KsListAdapter(myDatasetKs) {
-            val action = OneSystemFragmentDirections.actionOneSystemFragmentToKsDetailFragment(it.ksHeading)
-            this.findNavController().navigate(action)
-        }
-        binding?.recyclerViewKs?.adapter = adapter
-        binding?.recyclerViewKs?.setHasFixedSize(true)
-    }
-
-    //    48 Привязка адаптера к НК и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
-    private fun navigationNkToNkDetailFragment() {
-        val myDatasetNk = NkDataSource(requireContext()).loadNkDataSource()
-        val adapter = NkListAdapter(myDatasetNk) {
-            val action = OneSystemFragmentDirections.actionOneSystemFragmentToNkDetailFragment(it.nkHeading)
-            this.findNavController().navigate(action)
-        }
-        binding?.recyclerViewNk?.adapter = adapter
-        binding?.recyclerViewNk?.setHasFixedSize(true)
-    }
-
-    //    49 Привязка адаптера к Видео и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
-    private fun navigationVideoToVideoDetailFragment() {
-        val myDatasetVideo = VideoDataSource(requireContext()).loadVideoDataSource()
-        val adapter = VideoListAdapter(myDatasetVideo) {
-            val action = OneSystemFragmentDirections.actionOneSystemFragmentToVideoDetailFragment(it.videoHeading)
-            this.findNavController().navigate(action)
-        }
-        binding?.recyclerViewVideo?.adapter = adapter
-        binding?.recyclerViewVideo?.setHasFixedSize(true)
-    }
+//    //    31.2 Привязка адаптера к АиТ и вызов этой функции в onViewCrated
+//    private fun navigationAitToAitDetailFragment() {
+//        //35 При создании объекта AitDataSource в параметрах необходимо указать requireContext(), если это фрагмент, А если это активити, то надо указать context().
+//        val myDatasetAit = AitDataSource(requireContext()).loadAitDataSourse()
+//        val adapter = AitListAdapter(myDatasetAit) {
+//            //33 Навигация во фрагмент деталей АиТ
+//            val action =
+//                OneSystemFragmentDirections.actionOneSystemFragmentToAitDetailFragment(it.aitHeading)
+//            this.findNavController().navigate(action)
+//        }
+//        binding?.recyclerViewAit?.adapter = adapter
+//        binding?.recyclerViewAit?.setHasFixedSize(true)
+//    }
+//
+//    //    41 Привязка адаптера к ПС и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
+//    private fun navigationPsToPsDetailFragment() {
+//        val myDatasetPs = PsDataSource(requireContext()).loadPsDataSource()
+//        val adapter = PsListAdapter(myDatasetPs) {
+//            val action = OneSystemFragmentDirections.actionOneSystemFragmentToPsDetailFragment(it.psHeading)
+//            this.findNavController().navigate(action)
+//        }
+//        binding?.recyclerViewPs?.adapter = adapter
+//        binding?.recyclerViewPs?.setHasFixedSize(true)
+//    }
+//
+//    //    47 Привязка адаптера к КС и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
+//    private fun navigationKsToKsDetailFragment() {
+//        val myDatasetKs = KsDataSource(requireContext()).loadKsDataSource()
+//        val adapter = KsListAdapter(myDatasetKs) {
+//            val action = OneSystemFragmentDirections.actionOneSystemFragmentToKsDetailFragment(it.ksHeading)
+//            this.findNavController().navigate(action)
+//        }
+//        binding?.recyclerViewKs?.adapter = adapter
+//        binding?.recyclerViewKs?.setHasFixedSize(true)
+//    }
+//
+//    //    48 Привязка адаптера к НК и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
+//    private fun navigationNkToNkDetailFragment() {
+//        val myDatasetNk = NkDataSource(requireContext()).loadNkDataSource()
+//        val adapter = NkListAdapter(myDatasetNk) {
+//            val action = OneSystemFragmentDirections.actionOneSystemFragmentToNkDetailFragment(it.nkHeading)
+//            this.findNavController().navigate(action)
+//        }
+//        binding?.recyclerViewNk?.adapter = adapter
+//        binding?.recyclerViewNk?.setHasFixedSize(true)
+//    }
+//
+//    //    49 Привязка адаптера к Видео и вызов этой функции в onViewCrated + Переход на фрагмент с деталями
+//    private fun navigationVideoToVideoDetailFragment() {
+//        val myDatasetVideo = VideoDataSource(requireContext()).loadVideoDataSource()
+//        val adapter = VideoListAdapter(myDatasetVideo) {
+//            val action = OneSystemFragmentDirections.actionOneSystemFragmentToVideoDetailFragment(it.videoHeading)
+//            this.findNavController().navigate(action)
+//        }
+//        binding?.recyclerViewVideo?.adapter = adapter
+//        binding?.recyclerViewVideo?.setHasFixedSize(true)
+//    }
 }
