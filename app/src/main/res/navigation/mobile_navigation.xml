@@ -16,52 +16,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/psDetailFragment"
-        android:name="com.egorpoprotskiy.rcdm.ui.info.PsDetailFragment"
-        android:label="@string/details"
-        tools:layout="@layout/fragment_ps_detail" >
-        <argument
-            android:name="psHeading"
-            app:argType="string" />
-    </fragment>
-    <fragment
-        android:id="@+id/aitDetailFragment"
-        android:name="com.egorpoprotskiy.rcdm.ui.info.AitDetailFragment"
-        android:label="@string/details"
-        tools:layout="@layout/fragment_ait_detail" >
-        <argument
-            android:name="aitHeading"
-            app:argType="string" />
-    </fragment>
-    <fragment
-        android:id="@+id/ksDetailFragment"
-        android:name="com.egorpoprotskiy.rcdm.ui.info.KsDetailFragment"
-        android:label="@string/details"
-        tools:layout="@layout/fragment_ks_detail" >
-        <argument
-            android:name="ksHeading"
-            app:argType="string"/>
-    </fragment>
-    <fragment
-        android:id="@+id/videoDetailFragment"
-        android:name="com.egorpoprotskiy.rcdm.ui.info.VideoDetailFragment"
-        android:label="@string/details"
-        tools:layout="@layout/fragment_video_detail" >
-        <argument
-            android:name="videoHeading"
-            app:argType="string"/>
-    </fragment>
-    <fragment
-        android:id="@+id/nkDetailFragment"
-        android:name="com.egorpoprotskiy.rcdm.ui.info.NkDetailFragment"
-        android:label="@string/details"
-        tools:layout="@layout/fragment_nk_detail" >
-        <argument
-            android:name="nkHeading"
-            app:argType="string"/>
-    </fragment>
-
-    <fragment
         android:id="@+id/navigation_notes"
         android:name="com.egorpoprotskiy.rcdm.ui.notes.NotesFragment"
         android:label="@string/title_notes"
@@ -118,20 +72,17 @@
             android:name="allSystem"
             app:argType="string"/>
         <action
-            android:id="@+id/action_oneSystemFragment_to_aitDetailFragment"
-            app:destination="@id/aitDetailFragment" />
-        <action
-            android:id="@+id/action_oneSystemFragment_to_psDetailFragment"
-            app:destination="@id/psDetailFragment" />
-        <action
-            android:id="@+id/action_oneSystemFragment_to_ksDetailFragment"
-            app:destination="@id/ksDetailFragment" />
-        <action
-            android:id="@+id/action_oneSystemFragment_to_videoDetailFragment"
-            app:destination="@id/videoDetailFragment" />
-        <action
-            android:id="@+id/action_oneSystemFragment_to_nkDetailFragment"
-            app:destination="@id/nkDetailFragment" />
+            android:id="@+id/action_oneSystemFragment_to_infoDetailFragment"
+            app:destination="@id/infoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoDetailFragment"
+        android:name="com.egorpoprotskiy.rcdm.ui.info.InfoDetailFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_info_detail" >
+        <argument
+            android:name="heading"
+            app:argType="string"/>
     </fragment>
 
 </navigation>

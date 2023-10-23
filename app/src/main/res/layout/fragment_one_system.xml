@@ -16,7 +16,7 @@
         android:textSize="@dimen/heading"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_marginTop="@dimen/marginAllRecyclerView"
+        android:layout_marginTop="@dimen/marginAll2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
