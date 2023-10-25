@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="@id/guideline_middle_info"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        tools:listitem="@layout/item_all_system" />
+        tools:listitem="@layout/item_all_system"
+        android:clipToPadding="false"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_middle_info"
