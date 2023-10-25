@@ -66,7 +66,7 @@
     <fragment
         android:id="@+id/oneSystemFragment"
         android:name="com.egorpoprotskiy.rcdm.ui.info.OneSystemFragment"
-        android:label="fragment_one_system"
+        android:label="@string/otstupleniya"
         tools:layout="@layout/fragment_one_system" >
         <argument
             android:name="allSystem"
