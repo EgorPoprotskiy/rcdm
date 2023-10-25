@@ -29,6 +29,8 @@
     <string name="note_details">Тема: %1$s; Описание: %2$s</string>пу
 
     <!--    INFO-->
+<!--    Отступления-->
+    <string name="otstupleniya">Отступления</string>
     <!--    Автоматика и телемаханика-->
     <string name="ait_heading">АВТОМАТИКА И ТЕЛЕМЕХАНИКА</string>
     <!--    АЛСН-->

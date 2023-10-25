@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.adapter.AitListAdapter
 import com.egorpoprotskiy.rcdm.adapter.KsListAdapter
 import com.egorpoprotskiy.rcdm.adapter.NkListAdapter
@@ -117,6 +118,15 @@ class OneSystemFragment : Fragment() {
                     binding?.recyclerViewOneSystem?.adapter = adapter
                     binding?.recyclerViewOneSystem?.setHasFixedSize(true)
                     binding?.tvOneSystem?.text = allSystem
+                }
+            }
+        }
+    }
+    companion object {
+        fun newInstance(itemSystem: String): OneSystemFragment {
+            return OneSystemFragment().apply {
+                arguments = Bundle().apply {
+                    putString("allSystem", itemSystem)
                 }
             }
         }
