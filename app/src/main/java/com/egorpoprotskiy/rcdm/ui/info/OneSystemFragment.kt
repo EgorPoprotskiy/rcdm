@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.adapter.AitListAdapter
 import com.egorpoprotskiy.rcdm.adapter.KsListAdapter
 import com.egorpoprotskiy.rcdm.adapter.NkListAdapter

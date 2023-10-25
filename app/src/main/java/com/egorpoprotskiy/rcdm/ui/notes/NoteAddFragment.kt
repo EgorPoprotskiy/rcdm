@@ -2,7 +2,6 @@ package com.egorpoprotskiy.rcdm.ui.notes
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -109,7 +108,7 @@ class NoteAddFragment : Fragment() {
                 R.id.blue -> resources.getColor(R.color.blue).toString()
                 R.id.green -> resources.getColor(R.color.green).toString()
                 R.id.pink -> resources.getColor(R.color.pink).toString()
-                else -> resources.getColor(R.color.defaultColor).toString()
+                R.id.white -> resources.getColor(R.color.defaultColor).toString()
             }
             //27.2 Слушатель нажатий на кнопку сохранить, но уже изменённые данные
             saveButton.setOnClickListener { updateNote() }

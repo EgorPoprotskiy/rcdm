@@ -2,7 +2,6 @@ package com.egorpoprotskiy.rcdm.data
 
 import android.content.Context
 import com.egorpoprotskiy.rcdm.R
-import com.egorpoprotskiy.rcdm.model.Ait
 import com.egorpoprotskiy.rcdm.model.AllSystem
 
 class AllSystemDataSource(private val context: Context) {

@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.egorpoprotskiy.rcdm.adapter.ExpandableListAdapter
 import com.egorpoprotskiy.rcdm.data.EasdChapterDataSource
 import com.egorpoprotskiy.rcdm.databinding.FragmentEasdBinding
-import com.egorpoprotskiy.rcdm.model.EasdChapter
 
 //50
 class EasdFragment : Fragment() {

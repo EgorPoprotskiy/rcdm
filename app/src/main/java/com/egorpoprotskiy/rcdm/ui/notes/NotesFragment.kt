@@ -16,7 +16,6 @@ import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.adapter.NoteListAdapter
 import com.egorpoprotskiy.rcdm.databinding.FragmentNotesBinding
 import com.egorpoprotskiy.rcdm.model.Note
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import kotlin.math.roundToInt
 

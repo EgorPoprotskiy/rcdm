@@ -6,11 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.adapter.AllSystemListAdapter
 import com.egorpoprotskiy.rcdm.data.AllSystemDataSource
-import com.egorpoprotskiy.rcdm.data.PsDataSource
-import com.egorpoprotskiy.rcdm.data.VideoDataSource
 import com.egorpoprotskiy.rcdm.databinding.FragmentInfoBinding
 
 class InfoFragment : Fragment() {
