@@ -17,7 +17,7 @@
         android:id="@+id/ps_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
+        android:background="@color/black3"
         android:orientation="vertical">
 
         <TextView

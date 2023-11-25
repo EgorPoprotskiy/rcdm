@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.databinding.FragmentInfoDetailBinding
+import kotlin.coroutines.coroutineContext
 
 class InfoDetailFragment : Fragment() {
     //56
@@ -29,30 +30,35 @@ class InfoDetailFragment : Fragment() {
             val heading = arguments.getString("heading")
             binding?.headingView?.text = heading
             when (heading) {
-                "АЛСН" -> binding?.descriptionView?.text = getString(R.string.alsn_description)
-                "САУТ" -> binding?.descriptionView?.text = getString(R.string.saut_description)
-                "КТСМ" -> binding?.descriptionView?.text = getString(R.string.ktsm_description)
+                getString(R.string.alsn_heading) -> binding?.descriptionView?.text = getString(R.string.alsn_description)
+                getString(R.string.saut_heading) -> binding?.descriptionView?.text = getString(R.string.saut_description)
+                getString(R.string.ktsm_heading) -> binding?.descriptionView?.text = getString(R.string.ktsm_description)
 
-                "Зигзаг" -> binding?.descriptionView?.text = getString(R.string.ks_zigzag_description)
-                "Отступл 2" -> binding?.descriptionView?.text = getString(R.string.ks_bag2_description)
+                getString(R.string.ks_zigzag_heading) -> binding?.descriptionView?.text = getString(R.string.ks_zigzag_description)
+                getString(R.string.ks_bag2_heading) -> binding?.descriptionView?.text = getString(R.string.ks_bag2_description)
 
-                "Отступл 1" -> binding?.descriptionView?.text = getString(R.string.nk_bag1_description)
-                "Отступл 2" -> binding?.descriptionView?.text = getString(R.string.nk_bag2_description)
-                "Отступл 3" -> binding?.descriptionView?.text = getString(R.string.nk_bag3_description)
-                "Отступл 4" -> binding?.descriptionView?.text = getString(R.string.nk_bag4_description)
+                getString(R.string.nk_bag1_heading) -> binding?.descriptionView?.text = getString(R.string.nk_bag1_description)
+                getString(R.string.nk_bag2_heading) -> binding?.descriptionView?.text = getString(R.string.nk_bag2_description)
+                getString(R.string.nk_bag3_heading) -> binding?.descriptionView?.text = getString(R.string.nk_bag3_description)
+                getString(R.string.nk_bag4_heading) -> binding?.descriptionView?.text = getString(R.string.nk_bag4_description)
 
-                "Уровень" -> binding?.descriptionView?.text = getString(R.string.uroven_description)
-                "Перекос" -> binding?.descriptionView?.text = getString(R.string.perecos_description)
-                "Угол в плане" -> binding?.descriptionView?.text = getString(R.string.rihtovka_description)
-                "Шаблон" -> {
+                getString(R.string.uroven_heading) -> binding?.descriptionView?.text = getString(R.string.uroven_description)
+                getString(R.string.perecos_heading) -> binding?.descriptionView?.text = getString(R.string.perecos_description)
+                getString(R.string.rihtovka_heading) -> binding?.descriptionView?.text = getString(R.string.rihtovka_description)
+                getString(R.string.shablon_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ushirenie_sushenie)
                     binding?.descriptionView?.text = getString(R.string.shablon_description)
                 }
-                "Просадка" -> binding?.descriptionView?.text = getString(R.string.prosadka_description)
+                getString(R.string.prosadka_heading) -> binding?.descriptionView?.text = getString(R.string.prosadka_description)
 
-                "Зазор" -> binding?.descriptionView?.text = getString(R.string.video_zazor_description)
-                "Метка" -> binding?.descriptionView?.text = getString(R.string.video_mark_description)
-                "Болты" -> binding?.descriptionView?.text = getString(R.string.video_bolt_description)
+                getString(R.string.video_zazor_heading) -> binding?.descriptionView?.text = getString(R.string.video_zazor_description)
+                getString(R.string.video_mark_heading) -> binding?.descriptionView?.text = getString(R.string.video_mark_description)
+                getString(R.string.video_bolt_heading) -> binding?.descriptionView?.text = getString(R.string.video_bolt_description)
+                getString(R.string.video_nakladka_heading) -> binding?.descriptionView?.text = getString(R.string.video_nakladka_description)
+                getString(R.string.video_skrepleniya_heading) -> binding?.descriptionView?.text = getString(R.string.video_skrepleniya_description)
+                getString(R.string.video_shpali_heading) -> binding?.ivDescriptionView?.setImageResource(R.drawable.shpaly)
             }
         }
     }
 }
+

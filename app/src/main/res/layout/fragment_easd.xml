@@ -6,14 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
     tools:context=".ui.easd.EasdFragment">
 
     <ExpandableListView
         android:id="@+id/expandable_list_view_easd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:padding="@dimen/marginAllRecyclerView"
         android:layoutDirection="rtl"/>
 

@@ -28,12 +28,12 @@
     <string name="share_note">Поделиться заметкой</string>
     <string name="note_details">Тема: %1$s; Описание: %2$s</string>пу
 
-    <!--    INFO-->
+<!--    INFO-->
 <!--    Отступления-->
     <string name="otstupleniya">Отступления</string>
-    <!--    Автоматика и телемаханика-->
+<!--    Автоматика и телемаханика-->
     <string name="ait_heading">АВТОМАТИКА И ТЕЛЕМЕХАНИКА</string>
-    <!--    АЛСН-->
+<!--    АЛСН-->
     <string name="alsn_heading">АЛСН</string>
     <string name="alsn_description">\tАвтоматическая локомотивная сигнализация непрерывного действия.\n\n
         Длительность первого интервал в коде АЛСН:\n
@@ -45,7 +45,7 @@
         Ток АЛСН (при автономной тяге):\n
         менее 1,0А\n
         более 30А</string>
-    <!--    САУТ-->
+<!--    САУТ-->
     <string name="saut_heading">САУТ</string>
     <string name="saut_description">\tСистема втоматического управления торможением поезда.\n\n
         Амплитуда тока в шлейфе САУТ менее 0,4 – критично.\n\n
@@ -61,75 +61,126 @@
         Комбинации частот и шлейфов не соответствует маршруту и условиям движения – опасное нарушение.\n\n
         Прерывание тока (дребезг) в шлейфе устройства САУТ - критичное нарушение.\n\n
     </string>
-    <!--    КТСМ-->
+<!--    КТСМ-->
     <string name="ktsm_heading">КТСМ</string>
     <string name="ktsm_description">\tКомплекс технических средств монторинга нагрева букс вагонов.\n\n</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!--    Путеизмерение-->
+<!--    Путеизмерение-->
     <string name="ps_heading">ПУТЕИЗМЕРЕНИЕ</string>
-    <!--    Уровень-->
+<!--    Уровень-->
     <string name="uroven_heading">Уровень</string>
     <string name="uroven_description">Величины отступлений</string>
-    <!--    Перекос-->
+<!--    Перекос-->
     <string name="perecos_heading">Перекос</string>
     <string name="perecos_description">Величины отступлений</string>
-    <!--    Рихтовка-->
+<!--    Рихтовка-->
     <string name="rihtovka_heading">Угол в плане</string>
     <string name="rihtovka_description">Величины отступлений</string>
-    <!--    Шаблон-->
+<!--    Шаблон-->
     <string name="shablon_heading">Шаблон</string>
-    <string name="shablon_description">Величины отступлений</string>
-    <!--    Просадки-->
+    <string name="shablon_description">
+        \n\t-Номинальный размер ширины колеи:\n
+        при радиусе 350м и более – 1520мм;\n
+        при радиусе от 349м до 300м – 1530мм;\n
+        при радиусе 299м и менее – 1535мм.\n\n
+        \t-На участках с рельсошпальной решеткой сборки до 1970 года, в том числе старогодной решеткой допускается:\n
+        при радиусе 650м и более – 1524мм;\n
+        при радиусе от 650м до 450м – 1530мм;\n
+        при радиусе от 449м до 350м – 1535мм;\n
+        при радиусе 349м и менее – 1540мм.
+    </string>
+<!--    Просадки-->
     <string name="prosadka_heading">Просадка</string>
     <string name="prosadka_description">Величины отступлений</string>
 
-    <!--    Дефектокопия-->
+<!--    Дефектокопия-->
     <string name="nk_heading">ДЕФЕКТОСКОПИЯ</string>
-    <!--    Отступление 1-->
+<!--    Отступление 1-->
     <string name="nk_bag1_heading">Отступл 1</string>
     <string name="nk_bag1_description">Описание 1</string>
-    <!--    Отступление 2-->
+<!--    Отступление 2-->
     <string name="nk_bag2_heading">Отступл 2</string>
     <string name="nk_bag2_description">Описание 2</string>
-    <!--    Отступление 3-->
+<!--    Отступление 3-->
     <string name="nk_bag3_heading">Отступл 3</string>
     <string name="nk_bag3_description">Описание 3</string>
-    <!--    Отступление 4-->
+<!--    Отступление 4-->
     <string name="nk_bag4_heading">Отступл 4</string>
     <string name="nk_bag4_description">Описание 4</string>
 
-    <!--    Контактная сеть-->
+<!--    Контактная сеть-->
     <string name="ks_heading">КОНТАКТНАЯ СЕТЬ</string>
-    <!--    Зигзаг-->
+<!--    Зигзаг-->
     <string name="ks_zigzag_heading">Зигзаг</string>
     <string name="ks_zigzag_description">Величина отступления</string>
-    <!--    Провисание-->
+<!--    Провисание-->
     <string name="ks_bag2_heading">Отступл 2</string>
     <string name="ks_bag2_description">Описание 2</string>
 
 
-    <!--    Видеоконтроль-->
+<!--    Видеоконтроль-->
     <string name="video_headin">ВИДЕОКОНТРОЛЬ</string>
-    <!--    Величина зазора-->
-    <string name="video_zazor_heading">Зазор</string>
-    <string name="video_zazor_description">Величина отступления</string>
-    <!--    Маячки-->
+<!--    Величина зазора-->
+    <string name="video_zazor_heading">Cтыковые зазоры</string>
+    <string name="video_zazor_description">
+        менее 25мм - без ограничений\n\n
+        от 25мм до 26мм - ограничение скорости до 100км/ч(Выдаётся предписание на проведение натурного осмотра)\n\n
+        от 27мм до 30мм - ограничение скорости до 60км/ч(Выдаётся предписание на проведение натурного осмотра)\n\n
+        от 31мм до 35мм - ограничение скорости до 25км/ч\n\n
+        более 35мм - движение закрывается
+    </string>
+<!--    Маячки-->
     <string name="video_mark_heading">Метка</string>
-    <string name="video_mark_description">Величина отступления</string>
-    <!--    Болты-->
-    <string name="video_bolt_heading">Болты</string>
-    <string name="video_bolt_description">Величина отступления</string>
+    <string name="video_mark_description">При смещении контрольных сечений рельсовой плети относительно «маячных» шпал выдается предписание
+        на проведение натурного осмотра без ограничения скорости для движения поездов.</string>
+<!--    Болты-->
+    <string name="video_bolt_heading">Отсутствующие (срезанные) болты</string>
+    <string name="video_bolt_description">\tПри отсутствии (срезе) одного стыкового болта на конце рельса при четырехдырных накладках
+        (или двух при шестидырных накладках) скорость движения поездов ограничивается до 25 км/ч.\n\n
+        \tПри отсутствии (срезе) всех стыковых болтов на конце рельса движение поездов закрывается.</string>
+<!--    Накладки-->
+    <string name="video_nakladka_heading">Стыковые накладки</string>
+    <string name="video_nakladka_description">\tПри изломе одной или обеих стыковых накладок движение закрывается.
+        При надрыве (трещине) обеих стыковых накладок скорость движения поездов ограничивается до 40 км/ч.\n\n
+        \tПри подозрении на излом одной или обеих стыковых накладок и невозможности однозначной оценки их
+        состояния разрешается до проведения натурного осмотра ограничивать скорость до 40 км/ч.
+    </string>
+<!--    Скрепления-->
+    <string name="video_skrepleniya_heading">Дефектные, негодные или отсутствующие рельсовые скрепления</string>
+    <string name="video_skrepleniya_description">\tВ случае обнаружения в пути негодных узлов скреплений анкерного и
+        подкладочного типа на железобетонных и деревянных шпалах по одной нити скорость движения поездов ограничивается: \n
+        \t- в прямых и кривых радиусом БОЛЕЕ 650 м - при негодном узле скреплений на 4 шпалах подряд устанавливается скорость 60 км/ч, на 5 шпалах подряд – 40 км/ч,
+        на 6 шпалах – 25 км/ч; более чем на 6 шпалах – 15 км/ч или закрытие движения при ширине колеи 1545 мм и более;\n
+        \t- в кривых радиусом 650 м и МЕНЕЕ - при негодном узле скреплений на 4 шпалах подряд устанавливается скорость 40 км/ч; на 5 шпалах – 25 км/ч;
+        более чем на 5 шпалах – 15км/ч или закрытие движения при ширине колеи 1545 мм и более.\n\n
 
-    <!--    ЕАСД-->
-    <!--    Служба Ш-->
+        При наличии негодных узлов на бесподкладочных скреплениях по одной нити скорость движения поездов ограничивается: \n
+        \t- при негодном узле скреплений на 3 шпалах подряд устанавливается скорость 40 км/ч, на 4 шпалах – 25 км/ч,
+        на 5 и более – 15 км/ч или закрытие движения при ширине колеи 1545 мм и более.\n\n
+
+        При наличии негодных узлов промежуточного скрепления на рамном рельсе (в том числе отсутствие заклепок крепления подушки к башмаку),
+        в крестовине или контррельсовом рельсе стрелочного перевода по одной нити скорость движения поездов ограничивается:\n
+        \t- при негодном узле скреплений на 2 брусьях подряд скорость движения поездов по прямому направлению 60 км/ч, по боковому направлению – 40 км/ч;\n
+        \t- при негодном узле скреплений на 3 брусьях подряд скорость движения поездов по прямому направлению 40 км/ч, по боковому направлению – 25 км/ч;\n
+        \t- при негодном узле скреплений на 4 брусьях подряд скорость движения поездов по прямому направлению 25 км/ч, по боковому направлению – 15 км/ч;\n
+        \t- при негодном узле скреплений на 5 и более брусьях подряд скорость движения поездов по прямому направлению 15 км/ч, по боковому направлению – 15 км/ч, при ширине колеи 1545 мм и более движение закрывается.\n
+    </string>
+<!--    Шпалы-->
+    <string name="video_shpali_heading">Негодные (отсутствующие) деревянные и железобетонные шпалы</string>
+    <string name="video_shpali_description"></string>
+
+
+
+<!--    ЕАСД-->
+<!--    Служба Ш-->
     <string name="sh_sluzhba">Служба Ш</string>
     <string name="sh">Ш - ФИО</string>
     <string name="shch2">ШЧ-2 - ФИО</string>
     <string name="shch3">ШЧ-3 - ФИО</string>
     <string name="shch4">ШЧ-4 - ФИО</string>
-    <string name="shch6">ШЧ-6 - ФИО</string>
+    <string name="shch6">ШЧ-6 - ФИО</string>&lt;
     <string name="shch7">ШЧ-7 - ФИО</string>
     <string name="shch8">ШЧ-8 - ФИО</string>
     <string name="shch9">ШЧ-9 - ФИО</string>
@@ -137,44 +188,55 @@
     <string name="shch12">ШЧ-12 - ФИО</string>
     <string name="shch13">ШЧ-13 - ФИО</string>
     <string name="shch14">ШЧ-14 - ФИО</string>
-    <!--    Служба П-->
+<!--    Служба П-->
     <string name="p_sluzhba">Служба П</string>
     <string name="p">П - ФИО</string>
-    <string name="pch1">ПЧ-1 - ФИО</string>
-    <string name="pch2">ПЧ-2 - ФИО</string>
-    <string name="pch5">ПЧ-5 - ФИО</string>
-    <string name="pch6">ПЧ-6 - ФИО</string>
-    <string name="pch7">ПЧ-7 - ФИО</string>
-    <string name="pch8">ПЧ-8 - ФИО</string>
-    <string name="pch9">ПЧ-9 - ФИО</string>
-    <string name="pch10">ПЧ-10 - ФИО</string>
-    <string name="pch11">ПЧ-11 - ФИО</string>
-    <string name="pch12">ПЧ-12 - ФИО</string>
+    <string name="pch1">ПЧ-1 - Рамазанов А.М.</string>
+    <string name="pch2">ПЧ-2 - Кос Д.О.</string>
+    <string name="pch5">ПЧ-5 - Пильков П.О.</string>
+    <string name="pch6">ПЧ-6 - Астафьев А.Г.</string>
+    <string name="pch7">ПЧ-7 - Спирин И.А.</string>
+    <string name="pch8">ПЧ-8 - Шрамко А.В.</string>
+    <string name="pch9">ПЧ-9 - Давыденко С.А.</string>
+    <string name="pch10">ПЧ-10 - Серышев Д.В.</string>
+    <string name="pch11">ПЧ-11 - Брагин А.Б.</string>
+    <string name="pch12">ПЧ-12 - Гавриш А.С.</string>
     <string name="pch13">ПЧ-13 - ФИО</string>
-    <string name="pch14">ПЧ-14 - ФИО</string>
-    <string name="pch15">ПЧ-15 - ФИО</string>
-    <string name="pch16">ПЧ-16 - ФИО</string>
-    <string name="pch17">ПЧ-17 - ФИО</string>
-    <string name="pch18">ПЧ-18 - ФИО</string>
-    <string name="pch19">ПЧ-19 - ФИО</string>
-    <string name="pch20">ПЧ-20 - ФИО</string>
-    <string name="pch21">ПЧ-21 - ФИО</string>
-    <string name="pch22">ПЧ-22 - ФИО</string>
+    <string name="pch14">ПЧ-14 - Яшин А.Ю.</string>
+    <string name="pch15">ПЧ-15 - Мартюшев А.А.</string>
+    <string name="pch16">ПЧ-16 - Шумаков А.С.</string>
+    <string name="pch18">ПЧ-18 - Нестеренко Р.С.</string>
+    <string name="pch19">ПЧ-19 - Тлепин А.А.</string>
+    <string name="pch20">ПЧ-20 - Тимофеев И.В.</string>
+    <string name="pch22">ПЧ-22 - Фурсов Д.В.</string>
     <string name="pch23">ПЧ-23 - ФИО</string>
-    <string name="pch24">ПЧ-24 - ФИО</string>
-    <!--    Служба Э-->
+    <string name="pch24">ПЧ-24 - Зубарев Е.А.</string>
+    <string name="pch25">ПЧ-25 - Клевжиц А.Ю.</string>
+    <string name="pch26">ПЧ-26 - Беспалый К.В.</string>
+    <string name="pch27">ПЧ-27 - Алиев Э.А.</string>
+    <string name="pch28">ПЧ-28 - Тюко Г.А.</string>
+    <string name="pch29">ПЧ-29 - Лепёхин В.В.</string>
+    <string name="pch30">ПЧ-30 - Старицын П.П.</string>
+    <string name="pch31">ПЧ-31 - Игнатов А.А.</string>
+<!--    Служба Э-->
     <string name="e_sluzhba">Служба Э</string>
     <string name="e">Э - ФИО</string>
     <string name="ech1">ЭЧ-1 - ФИО</string>
     <string name="ech2">ЭЧ-2 - ФИО</string>
     <string name="ech3">ЭЧ-3 - ФИО</string>
-    <!--    Н-->
+<!--    Н-->
     <string name="upravlenie_dvzd">Управление ДВЖД</string>
     <string name="n">Н - Вейде</string>
     <string name="nz">НЗ - ФИО</string>
-    <string name="rb">РБ - ФИО</string>
+    <string name="nz_rb">НЗ-РБ - ФИО</string>
+    <string name="di">ДИ - ФИО</string>
+    <string name="rbter_1">РБтер-1 - ФИО</string>
+    <string name="dizrb">ДИЗРБ - ФИО</string>
+    <string name="dizter_diter">ДИЗТЕР-ДИТЕР - ФИО</string>
+    <string name="dizek">ДИЗЭК - ФИО</string>
+    <string name="dicusi">ДИЦУСИ - ФИО</string>
     <string name="dcup">ДЦУП - ФИО</string>
-    <!--    РЦДМ-->
+<!--    РЦДМ-->
     <string name="rcdm">РЦДМ</string>
     <string name="rcdmNach">РЦДМ - Перегуда Роман Валерьевич</string>
     <string name="rcdmz1">РЦДМЗ1 - Дягилев Денис Леонидович</string>

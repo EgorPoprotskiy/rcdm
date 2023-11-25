@@ -50,7 +50,7 @@
         android:layout_margin="@dimen/marginAll2"
         android:contentDescription="@string/share_note"
         android:src="@drawable/baseline_share_24"
-        android:backgroundTint="@color/purple_200"
+        android:backgroundTint="@color/black3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white"/>

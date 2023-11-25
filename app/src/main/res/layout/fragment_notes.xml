@@ -30,7 +30,7 @@
         android:layout_margin="@dimen/marginAll3"
         android:contentDescription="@string/add_new_note"
         android:src="@drawable/baseline_note_add_24"
-        app:backgroundTint="@color/purple_200"
+        app:backgroundTint="@color/black3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@android:color/white" />
