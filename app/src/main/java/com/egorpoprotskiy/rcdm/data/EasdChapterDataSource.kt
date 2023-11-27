@@ -11,21 +11,26 @@ class EasdChapterDataSource(private val context: Context) {
                 listOf(
                     context.getString(R.string.n),
                     context.getString(R.string.nz),
-                    context.getString(R.string.nz_rb),
                     context.getString(R.string.di),
                     context.getString(R.string.rbter_1),
-                    context.getString(R.string.dizrb),
+                    context.getString(R.string.rbter_2),
+                    context.getString(R.string.rbter_3),
+                    context.getString(R.string.rbter_4),
+                    context.getString(R.string.dizter_1),
+                    context.getString(R.string.dizter_2),
+                    context.getString(R.string.dizter_3),
+                    context.getString(R.string.dizter_4),
                     context.getString(R.string.dizter_diter),
                     context.getString(R.string.dizek),
                     context.getString(R.string.dicusi),
-                    context.getString(R.string.dcup)
+                    context.getString(R.string.cusi_vp)
                 )
             ),
             EasdChapter(context.getString(R.string.rcdm),
                 listOf(
                     context.getString(R.string.rcdmNach),
-                    context.getString(R.string.rcdmz1),
-                    context.getString(R.string.rcdmz2)
+                    context.getString(R.string.rcdmz_1),
+                    context.getString(R.string.rcdmz_2)
                 )
             ),
             EasdChapter(context.getString(R.string.p_sluzhba),

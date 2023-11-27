@@ -31,9 +31,15 @@ class InfoDetailFragment : Fragment() {
             binding?.headingView?.text = heading
             when (heading) {
 //СЦБ
-                getString(R.string.alsn_heading) -> binding?.descriptionView?.text = getString(R.string.alsn_description)
+                getString(R.string.alsn_interval_heading) -> binding?.descriptionView?.text = getString(R.string.alsn_interval_description)
+                getString(R.string.alsn_tok_post_heading) -> binding?.descriptionView?.text = getString(R.string.alsn_tok_post_description)
+                getString(R.string.alsn_tok_per_heading) -> binding?.descriptionView?.text = getString(R.string.alsn_tok_per_description)
+                getString(R.string.alsn_tok_auto_heading) -> binding?.descriptionView?.text = getString(R.string.alsn_tok_auto_description)
+                getString(R.string.alsen_tok_heading) -> binding?.descriptionView?.text = getString(R.string.alsen_tok_description)
+                getString(R.string.pam_heading) -> binding?.descriptionView?.text = getString(R.string.pam_description)
                 getString(R.string.saut_heading) -> binding?.descriptionView?.text = getString(R.string.saut_description)
                 getString(R.string.ktsm_heading) -> binding?.descriptionView?.text = getString(R.string.ktsm_description)
+                getString(R.string.ktsm_pkl_heading) -> binding?.descriptionView?.text = getString(R.string.ktsm_pkl_description)
 // Контактная сеть
                 getString(R.string.ks_zigzag_heading) -> binding?.descriptionView?.text = getString(R.string.ks_zigzag_description)
                 getString(R.string.ks_bag2_heading) -> binding?.descriptionView?.text = getString(R.string.ks_bag2_description)
