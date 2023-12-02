@@ -161,6 +161,7 @@
     <string name="oshk_heading">ОШК</string>
     <string name="oshk_description">\n\tУклон отвода ширины рельсовой колеи определяется на базе 2м без учета
         поправки на неравномерность бокового износа, не подлежит оценке в
+        +
         уравнительных стыках и приборах, глухих пересечениях, стрелочных
         переводах в зоне от стыка рамного рельса до корня остряков, в местах
         примыкания сердечника к усовику крестовины.
@@ -252,12 +253,79 @@
 
 <!--    Контактная сеть-->
     <string name="ks_heading">КОНТАКТНАЯ СЕТЬ</string>
+<!--    Высота-->
+    <string name="ks_visota_heading">Высота</string>
+    <string name="ks_visota_description">
+        1. Если иное не оговорено в нормативном журнале. \n
+        2. При снижении высоты контактного провода на перегоне и станции менее 5550 мм на постоянном и менее
+            5570 мм на переменном токе организовывается движение ЭПС с опущенными токоприемниками.\n
+        3. При одновременном отклонении в пролете и в точке фиксации штрафуется один раз.\n
+        4. В исключительных случаях, при отсутствии технической возможности устранения отступления, по
+            согласованию с владельцем инфраструктуры определяются иные условия пропуска поездов до
+            проведения реконструкции искусственного сооружения, штрафные баллы за данное отступление не начисляются.
+    </string>
+<!--    Уклон-->
+    <string name="ks_uklon_heading">Уклон</string>
+    <string name="ks_uklon_description">
+        1. Если иное не оговорено в нормативном журнале. \n
+        2. Учитывается как одно замечание на пролет.
+    </string>
+<!--    Вынос-->
+    <string name="ks_vinos_heading">Вынос</string>
+    <string name="ks_vinos_description">
+        1. Если иное не оговорено в нормативном журнале.
+    </string>
 <!--    Зигзаг-->
     <string name="ks_zigzag_heading">Зигзаг</string>
-    <string name="ks_zigzag_description">Величина отступления</string>
-<!--    Провисание-->
-    <string name="ks_bag2_heading">Отступл 2</string>
-    <string name="ks_bag2_description">Описание 2</string>
+    <string name="ks_zigzag_description">
+        1. Если иное не оговорено в нормативном журнале.
+    </string>
+<!--    Ненагруженный фиксатор-->
+    <string name="ks_nenagr_fiksator_heading">Ненагруженный фиксатор</string>
+    <string name="ks_nenagr_fiksator_description">
+        1. Фиксатор считается ненагруженным, если зигзаг в точке фиксации отличается от полусуммы (с учетом знаков) зигзагов на смежных с ним опорах менее чем на 50 мм.
+    </string>
+<!--    Подхват фиксатора-->
+    <string name="ks_podhvat_fiksatora_heading">Подхват фиксатора</string>
+    <string name="ks_podhvat_fiksatora_description">
+        1. Учет отступлений «подхват фиксатора» при срабатывании датчика измерительной системы принимать к учету при скорости замера не менее 50% от установленной на данном участке.\n
+        2. Случаи срабатывания датчика измерительной системы «подхват фиксатора» при касании контактного провода усом датчика в результате наклона вагона считать ложными.
+
+    </string>
+<!--    Односторонний зигзаг-->
+    <string name="ks_odnost_zigzag_heading">Односторонний зигзаг</string>
+    <string name="ks_odnost_zigzag_description">
+        1. Если иное не оговорено в нормативном журнале. \n
+        2 .Два последовательных односторонних зигзага штрафуются один раз.
+    </string>
+<!--    Подхват в пролете-->
+    <string name="ks_podhvat_v_prolete_heading">Подхват в пролете</string>
+    <string name="ks_podhvat_v_prolete_description">Величина отступления</string>
+<!--    Удар-->
+    <string name="ks_udar_heading">Удар</string>
+    <string name="ks_udar_description">Величина отступления</string>
+<!--    Отрыв-->
+    <string name="ks_otriv_heading">Отрыв</string>
+    <string name="ks_otriv_description">Величина отступления</string>
+<!--    Высота на воздушной стрелке-->
+    <string name="ks_visota_na_vozd_strelke_heading">Высота на воздушной стрелке</string>
+    <string name="ks_visota_na_vozd_strelke_description">Величина отступления</string>
+<!--    Нажатие-->
+    <string name="ks_nazhatie_heading">Нажатие</string>
+    <string name="ks_nazhatie_description">
+        1. Если иное не оговорено в нормативном журнале. \n
+    </string>
+<!--    Нагрев-->
+    <string name="ks_nagrev_heading">Нагрев</string>
+    <string name="ks_nagrev_description">
+        1. С момента отправки данных в ЭЧ после обработки файлов тепловизионной диагностики персоналом ВИКС.
+    </string>
+<!--    Дефектный изолятор-->
+    <string name="ks_def_izol_heading">Дефектный изолятор</string>
+    <string name="ks_def_izol_description">Величина отступления</string>
+<!--    Стрела подвеса-->
+    <string name="ks_strela_podvesa_heading">Стрела подвеса</string>
+    <string name="ks_strela_podvesa_description">Величина отступления</string>
 
 
 <!--    Видеоконтроль-->
@@ -317,17 +385,17 @@
 <!--    Служба Ш-->
     <string name="sh_sluzhba">Служба Ш</string>
     <string name="sh">Ш - ФИО</string>
-    <string name="shch2">ШЧ-2 - ФИО</string>
-    <string name="shch3">ШЧ-3 - ФИО</string>
-    <string name="shch4">ШЧ-4 - ФИО</string>
-    <string name="shch6">ШЧ-6 - ФИО</string>&lt;
-    <string name="shch7">ШЧ-7 - ФИО</string>
-    <string name="shch8">ШЧ-8 - ФИО</string>
-    <string name="shch9">ШЧ-9 - ФИО</string>
-    <string name="shch10">ШЧ-10 - ФИО</string>
-    <string name="shch12">ШЧ-12 - ФИО</string>
-    <string name="shch13">ШЧ-13 - ФИО</string>
-    <string name="shch14">ШЧ-14 - ФИО</string>
+    <string name="shch2">ШЧ-2 - Ткаченко А.В.</string>
+    <string name="shch3">ШЧ-3 - Лаврушин П.Ю.</string>
+    <string name="shch4">ШЧ-4 - Медников А.В.</string>
+    <string name="shch6">ШЧ-6 - Клишин Е.В.</string>&lt;
+    <string name="shch7">ШЧ-7 - Галенко В.А.</string>
+    <string name="shch8">ШЧ-8 - Дубинин Д.А.</string>
+    <string name="shch9">ШЧ-9 - Давыдов В.А.</string>
+    <string name="shch10">ШЧ-10 - Демин П.Ф.</string>
+    <string name="shch12">ШЧ-12 - Веденьков С.Н.</string>
+    <string name="shch13">ШЧ-13 - Головастиков С.Н.</string>
+    <string name="shch14">ШЧ-14 - Карась А.К.</string>
 <!--    Служба П-->
     <string name="p_sluzhba">Служба П</string>
     <string name="p">П - Минаев В.В.</string>
@@ -361,12 +429,14 @@
 <!--    Служба Э-->
     <string name="e_sluzhba">Служба Э</string>
     <string name="e">Э - ФИО</string>
-    <string name="ech1">ЭЧ-1 - ФИО</string>
-    <string name="ech2">ЭЧ-2 - ФИО</string>
-    <string name="ech3">ЭЧ-3 - ФИО</string>
+    <string name="ech1">ЭЧ-1 - Ховрич А.В.</string>
+    <string name="ech2">ЭЧ-2 - Лепехин Н.А.</string>
+    <string name="ech3">ЭЧ-3 - Мингалов Е.В.</string>
+    <string name="ech4">ЭЧ-4 - Конышев С.В.</string>
+    <string name="ech6">ЭЧ-6 - Толстокулаков И.С.</string>
 <!--    Н-->
     <string name="upravlenie_dvzd">Управление ДВЖД</string>
-    <string name="n">Н - Вейде</string>
+    <string name="n">Н - Вейде Е.В.</string>
     <string name="nz">НЗ - ФИО</string>
     <string name="di">ДИ - Гавриленко А.С.</string>
 
