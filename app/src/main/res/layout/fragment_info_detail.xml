@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginAll2"
         android:text="Заголовок"
+        android:textAlignment="center"
         android:textSize="@dimen/marginAll3"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"

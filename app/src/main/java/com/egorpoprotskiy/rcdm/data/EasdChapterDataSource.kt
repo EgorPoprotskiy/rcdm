@@ -87,6 +87,8 @@ class EasdChapterDataSource(private val context: Context) {
                     context.getString(R.string.ech1),
                     context.getString(R.string.ech2),
                     context.getString(R.string.ech3),
+                    context.getString(R.string.ech4),
+                    context.getString(R.string.ech6)
                 )
             ),
         )

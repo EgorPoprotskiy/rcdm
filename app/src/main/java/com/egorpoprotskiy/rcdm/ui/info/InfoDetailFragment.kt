@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.egorpoprotskiy.rcdm.R
 import com.egorpoprotskiy.rcdm.databinding.FragmentInfoDetailBinding
+import com.egorpoprotskiy.rcdm.model.Ks
 import kotlin.coroutines.coroutineContext
 
 class InfoDetailFragment : Fragment() {
@@ -41,8 +42,66 @@ class InfoDetailFragment : Fragment() {
                 getString(R.string.ktsm_heading) -> binding?.descriptionView?.text = getString(R.string.ktsm_description)
                 getString(R.string.ktsm_pkl_heading) -> binding?.descriptionView?.text = getString(R.string.ktsm_pkl_description)
 // Контактная сеть
-                getString(R.string.ks_zigzag_heading) -> binding?.descriptionView?.text = getString(R.string.ks_zigzag_description)
-                getString(R.string.ks_bag2_heading) -> binding?.descriptionView?.text = getString(R.string.ks_bag2_description)
+                getString(R.string.ks_visota_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_visota)
+                    binding?.descriptionView?.text = getString(R.string.ks_visota_description)
+                }
+                getString(R.string.ks_uklon_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_uklon)
+                    binding?.descriptionView?.text = getString(R.string.ks_uklon_description)
+                }
+                getString(R.string.ks_vinos_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_vinos)
+                    binding?.descriptionView?.text = getString(R.string.ks_vinos_description)
+                }
+                getString(R.string.ks_zigzag_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_zigzag)
+                    binding?.descriptionView?.text = getString(R.string.ks_zigzag_description)
+                }
+                getString(R.string.ks_nenagr_fiksator_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_nenagr_fiksator)
+                    binding?.descriptionView?.text = getString(R.string.ks_nenagr_fiksator_description)
+                }
+                getString(R.string.ks_podhvat_fiksatora_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_podhvat_fiksatora)
+                    binding?.descriptionView?.text = getString(R.string.ks_podhvat_fiksatora_description)
+                }
+                getString(R.string.ks_odnost_zigzag_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_odnost_zigzag)
+                    binding?.descriptionView?.text = getString(R.string.ks_odnost_zigzag_description)
+                }
+                getString(R.string.ks_podhvat_v_prolete_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_podhvat_v_prolete)
+                    binding?.descriptionView?.text = getString(R.string.ks_podhvat_v_prolete_description)
+                }
+                getString(R.string.ks_udar_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_udar)
+                    binding?.descriptionView?.text = getString(R.string.ks_udar_description)
+                }
+                getString(R.string.ks_otriv_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_otriv)
+                    binding?.descriptionView?.text = getString(R.string.ks_otriv_description)
+                }
+                getString(R.string.ks_visota_na_vozd_strelke_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_visota_na_vozd_strelke)
+                    binding?.descriptionView?.text = getString(R.string.ks_visota_na_vozd_strelke_description)
+                }
+                getString(R.string.ks_nazhatie_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_nazhatie)
+                    binding?.descriptionView?.text = getString(R.string.ks_nazhatie_description)
+                }
+                getString(R.string.ks_nagrev_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_nagrev)
+                    binding?.descriptionView?.text = getString(R.string.ks_nagrev_description)
+                }
+                getString(R.string.ks_def_izol_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_def_izol)
+                    binding?.descriptionView?.text = getString(R.string.ks_def_izol_description)
+                }
+                getString(R.string.ks_strela_podvesa_heading) -> {
+                    binding?.ivDescriptionView?.setImageResource(R.drawable.ks_strela_podvesa)
+                    binding?.descriptionView?.text = getString(R.string.ks_strela_podvesa_description)
+                }
 //Дефектоскопия
                 getString(R.string.nk_bag1_heading) -> binding?.descriptionView?.text = getString(R.string.nk_bag1_description)
                 getString(R.string.nk_bag2_heading) -> binding?.descriptionView?.text = getString(R.string.nk_bag2_description)
