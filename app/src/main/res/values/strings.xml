@@ -300,16 +300,16 @@
     </string>
 <!--    Подхват в пролете-->
     <string name="ks_podhvat_v_prolete_heading">Подхват в пролете</string>
-    <string name="ks_podhvat_v_prolete_description">Величина отступления</string>
+    <string name="ks_podhvat_v_prolete_description"></string>
 <!--    Удар-->
     <string name="ks_udar_heading">Удар</string>
-    <string name="ks_udar_description">Величина отступления</string>
+    <string name="ks_udar_description"></string>
 <!--    Отрыв-->
     <string name="ks_otriv_heading">Отрыв</string>
-    <string name="ks_otriv_description">Величина отступления</string>
+    <string name="ks_otriv_description"></string>
 <!--    Высота на воздушной стрелке-->
     <string name="ks_visota_na_vozd_strelke_heading">Высота на воздушной стрелке</string>
-    <string name="ks_visota_na_vozd_strelke_description">Величина отступления</string>
+    <string name="ks_visota_na_vozd_strelke_description"></string>
 <!--    Нажатие-->
     <string name="ks_nazhatie_heading">Нажатие</string>
     <string name="ks_nazhatie_description">
@@ -322,10 +322,10 @@
     </string>
 <!--    Дефектный изолятор-->
     <string name="ks_def_izol_heading">Дефектный изолятор</string>
-    <string name="ks_def_izol_description">Величина отступления</string>
+    <string name="ks_def_izol_description"></string>
 <!--    Стрела подвеса-->
     <string name="ks_strela_podvesa_heading">Стрела подвеса</string>
-    <string name="ks_strela_podvesa_description">Величина отступления</string>
+    <string name="ks_strela_podvesa_description"></string>
 
 
 <!--    Видеоконтроль-->
@@ -333,11 +333,16 @@
 <!--    Величина зазора-->
     <string name="video_zazor_heading">Cтыковые зазоры</string>
     <string name="video_zazor_description">
-        менее 25мм - без ограничений\n\n
-        от 25мм до 26мм - ограничение скорости до 100км/ч(Выдаётся предписание на проведение натурного осмотра)\n\n
-        от 27мм до 30мм - ограничение скорости до 60км/ч(Выдаётся предписание на проведение натурного осмотра)\n\n
-        от 31мм до 35мм - ограничение скорости до 25км/ч\n\n
-        более 35мм - движение закрывается
+        от 25мм до 30мм - выдаётся предписание на проведение натурного осмотра.\n
+        от 31мм до 35мм - ограничение скорости до 40км/ч.\n
+        более 35мм - движение закрывается.\n\n
+        На стрелочных переводах за исключением проекта 2750 и проектов стрелочных переводов с подвижным сердечником, скорость ограничивается при величине стыкового зазора в хвосте крестовин:\n
+        от 31мм до 35мм - ограничение скорости до 15км/ч.\n
+        более 35мм - движение закрывается.\n\n
+        В период действия низких температур (ниже -30°С) в изолирующих стыках скорость движения поездов ограничивается:\n
+        от 27мм до 30мм - ограничение скорости до 25км/ч.\n
+        от 31мм до 35мм - ограничение скорости до 15км/ч.\n
+        более 35мм - движение закрывается.
     </string>
 <!--    Маячки-->
     <string name="video_mark_heading">Метка</string>
@@ -437,23 +442,26 @@
 <!--    Н-->
     <string name="upravlenie_dvzd">Управление ДВЖД</string>
     <string name="n">Н - Вейде Е.В.</string>
-    <string name="nz">НЗ - ФИО</string>
-    <string name="di">ДИ - Гавриленко А.С.</string>
+    <string name="nz">НЗ - Кравчук А.А.</string>
+    <string name="nzter1">НЗТер-1 - Хворостов А.О.</string>
+    <string name="nzter3">НЗТер-3 - Лященко Е.А.</string>
+    <string name="nzter4">НЗТер-4 - Скрипка В.Н.</string>
+    <string name="nzter6">НЗТер-6 - Асмирко И.В.</string>
 
+    <string name="rb">РБ - Мысливцев Е.В.</string>
     <string name="rbter_1">РБтер-1 - Сидоренко А.А.</string>
-    <string name="rbter_2">РБтер-2 - Смагин А.В.</string>
-    <string name="rbter_3">РБтер-3 - Долгов А.В.</string>
-    <string name="rbter_4">РБтер-4 - Козлов В.А.</string>
+    <string name="rbter_3">РБтер-3 - Смагин А.В.</string>
+    <string name="rbter_4">РБтер-4 - Долгов А.В.</string>
+    <string name="rbter_6">РБтер-6 - Козлов В.А.</string>
 
+    <string name="di">ДИ - Гавриленко А.С.</string>
     <string name="dizter_1">ДИЗТер-1 - Глущенко М.А.</string>
-    <string name="dizter_2">ДИЗТер-2 - Нагайцев М.В.</string>
-    <string name="dizter_3">ДИЗТер-3 - Касприк А.Н.</string>
-    <string name="dizter_4">ДИЗТер-4 - Парыкин А.А.</string>
+    <string name="dizter_3">ДИЗТер-3 - Нагайцев М.В.</string>
+    <string name="dizter_4">ДИЗТер-4 - Касприк А.Н.</string>
+    <string name="dizter_6">ДИЗТер-6 - Парыкин А.А.</string>
 
 
-    <string name="dizter_diter">ДИЗТЕР-ДИТЕР - ФИО</string>
-
-    <string name="dizek">ДИЗЭК - ФИО</string>
+    <string name="d">Д - Липский В.В.</string>
     <string name="dicusi">ДИЦУСИ - Поляничко Е.В.</string>
     <string name="cusi_vp">ЦУСИ ВП - Кузнецов Б.О.</string>
 
